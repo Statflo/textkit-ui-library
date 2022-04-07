@@ -2,7 +2,7 @@
   "name": "@statflo/textkit-ui-library",
   "description": "TextKit UI Component Library",
   "author": "Statflo Inc.",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/textkit-ui-library.esm.js",
@@ -28,7 +28,7 @@
     "watch:tailwind": "postcss -w src/css/main.css -o src/css/index.css",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "build-storybook": "build-storybook -o docs-build"
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=16"
