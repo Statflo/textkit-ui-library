@@ -12,7 +12,7 @@ module.exports = {
         targets: [
           {
             src: [
-              './theme.js'
+              './src/heme.js'
             ],
             dest: 'dist'
           },

@@ -1,4 +1,4 @@
-const theme = require('./theme');
+const theme = require('./src/theme');
 
 module.exports = {
   prefix: 'tk-',
