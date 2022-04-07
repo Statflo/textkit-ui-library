@@ -23,11 +23,12 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "storybook:ghpages": "build-storybook -o docs-build",
     "semantic-release": "semantic-release",
     "build:tailwind": "postcss src/css/main.css -o src/css/index.css",
-    "watch:tailwind": "postcss -w src/css/main.css -o src/css/index.css"
+    "watch:tailwind": "postcss -w src/css/main.css -o src/css/index.css",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook -o docs-build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -130,6 +131,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-prettier": "3.4.1",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.0",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
