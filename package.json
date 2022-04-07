@@ -24,7 +24,7 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "storybook:ghpages": "build-storybook -o docs-build -s ./stories/assets",
+    "storybook:ghpages": "build-storybook -o docs-build",
     "semantic-release": "semantic-release",
     "build:tailwind": "postcss src/css/main.css -o src/css/index.css",
     "watch:tailwind": "postcss -w src/css/main.css -o src/css/index.css"
