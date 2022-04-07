@@ -12,13 +12,13 @@ module.exports = {
         targets: [
           {
             src: [
-              './tailwind.config.js'
+              './theme.js'
             ],
             dest: 'dist'
           },
           {
             src: [
-              './theme.js'
+              './tailwind.config.js'
             ],
             dest: 'dist'
           }
