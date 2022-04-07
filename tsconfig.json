@@ -3,8 +3,6 @@
   "include": [
     "src",
     "types",
-    "theme.js",
-    "tailwind.config.js"
   ],
   "compilerOptions": {
     "module": "esnext",

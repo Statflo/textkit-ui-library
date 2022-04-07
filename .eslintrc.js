@@ -5,6 +5,7 @@ module.exports = {
     "extends": [
         "plugin:eslint-comments/recommended"
     ],
+    "ignorePatterns": ["theme.js"],
     "rules": {
         "eslint-comments/no-unused-disable": "error",
         "import/order": [
