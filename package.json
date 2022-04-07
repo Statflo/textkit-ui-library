@@ -2,7 +2,7 @@
   "name": "@statflo/textkit-ui-library",
   "description": "TextKit UI Component Library",
   "author": "Statflo Inc.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/textkit-ui-library.esm.js",
