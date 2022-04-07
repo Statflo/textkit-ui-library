@@ -1,0 +1,157 @@
+{
+  "name": "@statflo/textkit-ui-library",
+  "description": "TextKit UI Component Library",
+  "author": "Statflo Inc.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/textkit-ui-library.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build && husky install",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "storybook:ghpages": "build-storybook -o docs-build -s ./stories/assets",
+    "semantic-release": "semantic-release",
+    "build:tailwind": "postcss src/css/main.css -o src/css/index.css",
+    "watch:tailwind": "postcss -w src/css/main.css -o src/css/index.css"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/textkit-ui-library.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/textkit-ui-library.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statflo/textkit-ui-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/statflo/textkit-ui-library/issues"
+  },
+  "homepage": "https://github.com/statflo/textkit-ui-library#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "analyzeCommits": "semantic-release-conventional-commits",
+    "branches": [
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogTitle": "# Changelog",
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@storybook/addon-essentials": "^6.4.20",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.4.20",
+    "@storybook/addons": "^6.4.20",
+    "@storybook/react": "^6.4.20",
+    "@storybook/theming": "^6.4.20",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.0",
+    "@types/react": "^17.0.43",
+    "@types/react-datepicker": "^4.3.4",
+    "@types/react-dom": "^17.0.14",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "commitizen": "^4.2.4",
+    "cssnano": "^5.1.7",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-prettier": "3.4.1",
+    "husky": "^7.0.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-is": "^18.0.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "semantic-release": "^19.0.2",
+    "semantic-release-conventional-commits": "^3.0.0",
+    "size-limit": "^7.0.8",
+    "tailwindcss": "^3.0.23",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@storybook/addon-knobs": "^6.4.0",
+    "@storybook/addon-postcss": "^2.0.0",
+    "react-datepicker": "^4.7.0",
+    "react-loader-spinner": "^6.0.0-0"
+  }
+}
