@@ -35,11 +35,11 @@ export default function DatePicker({
   }, [date, onDateChange]);
 
   return (
-    <div className="tk-relative tk-w-full tk-border tk-border-gray-spacer tk-rounded-md tk-flex tk-items-center tk-px-3 tk-h-10 focus-within:tk-border-primary-default">
+    <div className="relative w-full border border-gray-spacer rounded-md flex items-center px-3 h-10 focus-within:border-primary-default">
       <ReactDatePicker
         ref={pickerInput}
         id={id}
-        className="tk-w-full"
+        className="w-full"
         aria-label={label}
         showTimeSelect={showTimeSelect}
         useWeekdaysShort={shortDays}
@@ -49,8 +49,8 @@ export default function DatePicker({
         placeholderText={placeholder ? placeholder : 'YYYY-MM-DD --:--'}
         dateFormat={format ? format : 'yyyy-MM-dd h:mm aa'}
       />
-      <div className="tk-absolute tk-cursor-pointer tk-right-3 tk-top-[10px] tk-z-10 tk-w-4 tk-h-4 tk-pointer-events-none">
-        <Calendar className="tk-text-main-l2" />
+      <div className="absolute cursor-pointer right-3 top-[10px] z-10 w-4 h-4 pointer-events-none">
+        <Calendar className="text-main-l2" />
       </div>
     </div>
   );

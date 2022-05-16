@@ -10,26 +10,26 @@ export default function Checkbox({
   ...otherProps
 }: Props) {
   return (
-    <div className="tk-flex tk-items-start tk-flex-col">
-      <div className="tk-flex tk-items-start tk-flex-row">
+    <div className="flex items-start flex-col">
+      <div className="flex items-start flex-row">
         <label
           htmlFor={otherProps.id}
-          className="tk-flex tk-items-center tk-text-left tk-cursor-pointer tk-space-x-2"
+          className="flex items-center text-left cursor-pointer space-x-2"
         >
           <input
             id={otherProps.id}
             type="checkbox"
             className={classNames(
-              'tk-w-4 tk-h-4 tk-rounded-sm tk-border tk-border-gray-spacer tk-appearance-none',
-              'checked:tk-bg-primary-default checked:tk-border-primary-default checked:tk-text-white',
-              'checked:after:tk-content-["✓"] checked:after:tk-font-bold checked:after:tk-relative checked:after:tk-text-xs',
-              'checked:after:tk-text-xs checked:after:tk-top-[-6px] checked:after:tk-left-[1px]',
-              'disabled:tk-opacity-50 disabled:tk-bg-gray-spacer',
+              'w-4 h-4 rounded-sm border border-gray-spacer appearance-none',
+              'checked:bg-primary-default checked:border-primary-default checked:text-white',
+              'checked:after:content-["✓"] checked:after:font-bold checked:after:relative checked:after:text-xs',
+              'checked:after:text-xs checked:after:top-[-6px] checked:after:left-[1px]',
+              'disabled:opacity-50 disabled:bg-gray-spacer',
               className ?? ''
             )}
             {...otherProps}
           />
-          <span className="tk-inline-block tk-text-sm tk-font-medium tk-text-main-default">
+          <span className="inline-block text-sm font-medium text-main-default">
             {children}
           </span>
         </label>

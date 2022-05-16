@@ -15,10 +15,10 @@ export default function TextAreaInput({
     <textarea
       rows={2}
       className={classNames(
-        'tk-w-full tk-border tk-text-sm tk-font-medium tk-rounded-md tk-px-3 tk-py-2 placeholder:tk-text-main-l2 tk-bg-white',
+        'w-full border text-sm font-medium rounded-md px-3 py-2 placeholder:text-main-l2 bg-white',
         error
-          ? 'tk-bg-error-l2 tk-border-error-default tk-text-main-default'
-          : 'tk-text-main-default tk-border-gray-spacer',
+          ? 'bg-error-l2 border-error-default text-main-default'
+          : 'text-main-default border-gray-spacer',
         className ?? ''
       )}
       {...otherProps}

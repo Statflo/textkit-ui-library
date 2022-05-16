@@ -15,15 +15,13 @@ export default function Label({
   return (
     <label
       className={classNames(
-        'tk-block tk-text-sm tk-text-main-default tk-text-left tk-font-medium',
+        'block text-sm text-main-default text-left font-medium',
         className ?? ''
       )}
       {...otherProps}
     >
       {children}
-      {required && (
-        <span className="tk-ml-1 tk-text-xs tk-text-error-default">*</span>
-      )}
+      {required && <span className="ml-1 text-xs text-error-default">*</span>}
     </label>
   );
 }

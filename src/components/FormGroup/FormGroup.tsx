@@ -17,7 +17,7 @@ export default function FormGroup({
   required = false,
 }: Props) {
   return (
-    <div className="tk-w-full tk-space-y-1">
+    <div className="w-full space-y-1">
       <Label required={required}>{label}</Label>
       {children}
       {error && <InputError>{error}</InputError>}

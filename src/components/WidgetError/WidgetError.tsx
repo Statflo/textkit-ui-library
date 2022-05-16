@@ -15,16 +15,16 @@ export default function WidgetError({
   onRefresh,
 }: Props) {
   return (
-    <div className="tk-flex tk-items-center tk-justify-center tk-flex-col tk-py-20 tk-space-y-7">
-      <div className="tk-flex tk-items-center tk-justify-center tk-flex-col tk-text-warning-l1 tk-space-y-2">
-        <Warning className="tk-h-8 tk-w-8" />
-        <div className="tk-font-medium tk-text-main-default tk-leading-5 tk-text-center">
+    <div className="flex items-center justify-center flex-col py-20 space-y-7">
+      <div className="flex items-center justify-center flex-col text-warning-l1 space-y-2">
+        <Warning className="h-8 w-8" />
+        <div className="font-medium text-main-default leading-5 text-center">
           {children}
         </div>
       </div>
       {onRefresh && (
-        <button className="tk-text-primary-default tk-flex tk-items-center tk-justify-center tk-text-sm tk-space-x-1">
-          <Refresh className="tk-w-4 tk-h-4" />
+        <button className="text-primary-default flex items-center justify-center text-sm space-x-1">
+          <Refresh className="w-4 h-4" />
           <span>{refreshLabel}</span>
         </button>
       )}
