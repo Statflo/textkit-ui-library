@@ -5,5 +5,5 @@ interface Props {
 }
 
 export default function CheckboxGroup({ children }: Props) {
-  return <div className="tk-w-full tk-space-y-1">{children}</div>;
+  return <div className="w-full space-y-1">{children}</div>;
 }

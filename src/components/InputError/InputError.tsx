@@ -12,7 +12,7 @@ export default function InputError({
   return (
     <span
       className={classNames(
-        'tk-block tk-text-sm tk-text-error-default tk-text-left tk-font-medium',
+        'block text-sm text-error-default text-left font-medium',
         className ?? ''
       )}
       {...otherProps}

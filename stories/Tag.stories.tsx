@@ -9,7 +9,7 @@ export default { title: "Tag", argTypes: {
 } };
 
 const Template = (args: any) => (
-    <div className="tk-w-96">
+    <div className="w-96">
         <Tag type={args.type}>
             {args.label}
         </Tag>
@@ -23,25 +23,25 @@ Default.args = {
 }
 
 export const Success = () => {
-    return <div className="tk-w-96">
+    return <div className="w-96">
         <Tag type="success">Success Tag</Tag>
     </div>    
 };
 
 export const Warning = () => {
-    return <div className="tk-w-96">
+    return <div className="w-96">
         <Tag type="warning">Warning Tag</Tag>
     </div>    
 };
 
 export const Danger = () => {
-    return <div className="tk-w-96">
+    return <div className="w-96">
         <Tag type="danger">Danger Tag</Tag>
     </div>    
 };
 
 export const Info = () => {
-    return <div className="tk-w-96">
+    return <div className="w-96">
         <Tag type="info">Info Tag</Tag>
     </div>    
 };

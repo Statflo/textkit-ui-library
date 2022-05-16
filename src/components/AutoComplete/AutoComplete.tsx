@@ -1,29 +1,30 @@
-import { Listbox, Transition } from '@headlessui/react';
+import { Combobox, Transition } from '@headlessui/react';
 import React, { Fragment, useEffect, useState } from 'react';
 
 import { classNames } from '../../utils/classnames';
 import ChevronDown from '../icons/ChevronDown';
 import ChevronUp from '../icons/ChevronUp';
+import Search from '../icons/Search';
 
 import GroupedOptions from './GroupedOptions';
 
-export type DropdownOption = {
+export type AutoCompleteOption = {
   id: string | number;
   disabled?: boolean;
   label: string;
   value?: string;
-  options?: DropdownOption[];
+  options?: AutoCompleteOption[];
 };
 
 interface Props {
   openTop?: boolean;
-  options: DropdownOption[];
+  options: AutoCompleteOption[];
   placeholder?: string;
-  selected?: DropdownOption;
-  onChange: (option: DropdownOption) => void;
+  selected?: AutoCompleteOption;
+  onChange: (option: AutoCompleteOption) => void;
 }
 
-export default function Dropdown({
+export default function AutoComplete({
   openTop = false,
   options = [],
   placeholder = 'Select',
@@ -31,7 +32,7 @@ export default function Dropdown({
   onChange,
 }: Props) {
   const [selectedOption, setSelectedOption] =
-    useState<DropdownOption | undefined>(selected);
+    useState<AutoCompleteOption | undefined>(selected);
   const [grouped, setGrouped] = useState<boolean>(false);
   const [query, setQuery] = useState<string>('');
 
@@ -41,7 +42,7 @@ export default function Dropdown({
     }
   }, [options]);
 
-  const handleOnChange = (option: DropdownOption) => {
+  const handleOnChange = (option: AutoCompleteOption) => {
     setSelectedOption(option);
     onChange(option);
   };
@@ -51,7 +52,7 @@ export default function Dropdown({
       return options;
     }
 
-    const list: DropdownOption[] = [];
+    const list: AutoCompleteOption[] = [];
 
     options.forEach((opt) => {
       if (opt.options && opt.options.length > 0) {
@@ -77,11 +78,11 @@ export default function Dropdown({
   };
 
   return (
-    <Listbox value={selectedOption} onChange={handleOnChange}>
+    <Combobox value={selectedOption} onChange={handleOnChange}>
       {({ open }) => (
         <div className="relative block">
-          <Listbox.Button className="w-full border rounded-md border-gray-spacer bg-white text-left h-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-default">
-            <Listbox.Label className="px-4 select-none flex items-center justify-between text-main-default cursor-pointer space-x-2 h-8 rounded-sm">
+          <Combobox.Button tabIndex={1} className="group w-full border rounded-md border-gray-spacer bg-white text-left h-10 focus:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-default">
+            <Combobox.Label tabIndex={1} className="px-4 select-none flex items-center justify-between text-main-default cursor-pointer space-x-2 h-8 rounded-sm focus:outline-none">
               <span className="text-sm font-medium text-main-default flex-1 truncate">
                 {selectedOption ? selectedOption.label : placeholder}
               </span>
@@ -90,8 +91,8 @@ export default function Dropdown({
               ) : (
                 <ChevronDown className="w-2 h-2 text-main-l2" />
               )}
-            </Listbox.Label>
-          </Listbox.Button>
+            </Combobox.Label>
+          </Combobox.Button>
           <Transition
             as={Fragment}
             leave="transition ease-in duration-100"
@@ -105,7 +106,17 @@ export default function Dropdown({
                 openTop ? 'bottom-11' : 'mt-1'
               )}
             >
-              <Listbox.Options className="w-full overflow-auto max-h-60 text-sm focus:outline-none">
+              <div className={classNames(
+                'w-full flex items-center border-b border-gray-spacer px-2 space-x-2 py-2',
+              )}>
+                <Search className="w-4 h-4 text-main-l2" />
+                <Combobox.Input
+                  className="border-none text-sm text-main-default focus:outline-none focus:ring-0 h-8 placeholder:text-main-l2 w-full"
+                  placeholder="Search"
+                  onChange={(event) => setQuery(event.target.value)}
+                />
+              </div>
+              <Combobox.Options className="w-full overflow-auto max-h-60 text-sm">
                 {filteredOptions().length === 0 ? (
                   <div className="cursor-default select-none relative py-2 px-4 text-gray-700">
                     Nothing found.
@@ -127,7 +138,7 @@ export default function Dropdown({
                         );
                       } else {
                         return (
-                          <Listbox.Option
+                          <Combobox.Option
                             key={option.id}
                             className={({ active }) =>
                               classNames(
@@ -144,17 +155,17 @@ export default function Dropdown({
                             <span className="block truncate font-medium">
                               {option.label}
                             </span>
-                          </Listbox.Option>
+                          </Combobox.Option>
                         );
                       }
                     })}
                   </div>
                 )}
-              </Listbox.Options>
+              </Combobox.Options>
             </div>
           </Transition>
         </div>
       )}
-    </Listbox>
+    </Combobox>
   );
 }

@@ -23,15 +23,15 @@ const Button = ({
   return (
     <button
       className={classNames(
-        'tk-px-3 tk-font-medium tk-rounded focus:tk-outline-none focus:tk-ring-2 focus:tk-ring-offset-2 focus:tk-ring-primary-default tk-select-none disabled:tk-opacity-50',
-        large ? 'tk-text-base tk-leading-6' : 'tk-text-sm tk-leading-4',
-        small ? 'tk-h-6' : large ? 'tk-h-10' : 'tk-h-8',
+        'px-3 font-medium rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-default select-none disabled:opacity-50',
+        large ? 'text-base leading-6' : 'text-sm leading-4',
+        small ? 'h-6' : large ? 'h-10' : 'h-8',
         reversed
-          ? 'tk-bg-white tk-border tk-border-transparent tk-text-primary-default hover:tk-text-primary-hover hover:tk-bg-gray-hover'
+          ? 'bg-white border border-transparent text-primary-default hover:text-primary-hover hover:bg-gray-hover'
           : secondary
-          ? 'tk-bg-white tk-border tk-border-primary-default tk-text-primary-default hover:tk-bg-primary-active hover:tk-bg-opacity-20'
-          : 'tk-text-white tk-border tk-border-transparent tk-bg-primary-default hover:tk-bg-primary-hover',
-        fullWidth ? 'tk-w-full' : '',
+          ? 'bg-white border border-primary-default text-primary-default hover:bg-primary-active hover:bg-opacity-20'
+          : 'text-white border border-transparent bg-primary-default hover:bg-primary-hover',
+        fullWidth ? 'w-full' : '',
         className ?? ''
       )}
       {...otherProps}

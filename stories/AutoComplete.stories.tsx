@@ -1,21 +1,11 @@
 import React from "react";
-import Dropdown from "../src/components/Dropdown/Dropdown";
+import AutoComplete from "../src/components/AutoComplete/AutoComplete";
 
-export default { title: "Dropdown" };
-
-export const Empty = () => {
-    return <div className="w-96">
-        <Dropdown 
-            selected={{ id: '1', label: 'One', value: 'one' }}
-            options={[]}
-            onChange={(option) => console.log('option', option)}
-        />
-    </div>
-};
+export default { title: "AutoComplete" };
 
 export const Default = () => {
     return <div className="w-96">
-        <Dropdown 
+        <AutoComplete 
             selected={{ id: '1', label: 'One', value: 'one' }}
             options={[
                 { id: '1', label: 'One', value: 'one' },
@@ -34,9 +24,19 @@ export const Default = () => {
     </div>
 };
 
+export const Empty = () => {
+    return <div className="w-96">
+        <AutoComplete 
+            selected={{ id: '1', label: 'One', value: 'one' }}
+            options={[]}
+            onChange={(option) => console.log('option', option)}
+        />
+    </div>
+};
+
 export const OpenAbove = () => {
     return <div className="w-96 mt-80">
-        <Dropdown 
+        <AutoComplete 
             openTop
             selected={{ id: '1', label: 'One', value: 'one' }}
             options={[
@@ -58,7 +58,7 @@ export const OpenAbove = () => {
 
 export const Groups = () => {
     return <div className="w-96">
-        <Dropdown 
+        <AutoComplete 
             selected={{ id: '1', label: 'One', value: 'one' }}
             options={[
                 { id: '1', label: 'Group A', options: [
