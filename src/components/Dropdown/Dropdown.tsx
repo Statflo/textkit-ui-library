@@ -36,7 +36,11 @@ export default function Dropdown({
   const [query, setQuery] = useState<string>('');
 
   useEffect(() => {
-    if (options.length > 0 && options[0].options && options[0].options.length > 0) {
+    if (
+      options.length > 0 &&
+      options[0].options &&
+      options[0].options.length > 0
+    ) {
       setGrouped(true);
     }
   }, [options]);
@@ -111,11 +115,7 @@ export default function Dropdown({
                     Nothing found.
                   </div>
                 ) : (
-                  <div
-                    className={
-                      grouped ? 'divide-y divide-gray-space' : ''
-                    }
-                  >
+                  <div className={grouped ? 'divide-y divide-gray-space' : ''}>
                     {filteredOptions().map((option) => {
                       if (option.options && option.options.length > 0) {
                         return (

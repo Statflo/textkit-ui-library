@@ -31,9 +31,7 @@ export default function GroupedOptions({ group, selectedOption }: Props) {
             }
             value={option}
           >
-            <span className="block truncate font-medium">
-              {option.label}
-            </span>
+            <span className="block truncate font-medium">{option.label}</span>
           </Combobox.Option>
         ))}
     </div>

@@ -21,9 +21,7 @@ export default function Label({
       {...otherProps}
     >
       {children}
-      {required && (
-        <span className="ml-1 text-xs text-error-default">*</span>
-      )}
+      {required && <span className="ml-1 text-xs text-error-default">*</span>}
     </label>
   );
 }

@@ -37,7 +37,11 @@ export default function AutoComplete({
   const [query, setQuery] = useState<string>('');
 
   useEffect(() => {
-    if (options.length > 0 && options[0].options && options[0].options.length > 0) {
+    if (
+      options.length > 0 &&
+      options[0].options &&
+      options[0].options.length > 0
+    ) {
       setGrouped(true);
     }
   }, [options]);
@@ -81,8 +85,14 @@ export default function AutoComplete({
     <Combobox value={selectedOption} onChange={handleOnChange}>
       {({ open }) => (
         <div className="relative block">
-          <Combobox.Button tabIndex={1} className="group w-full border rounded-md border-gray-spacer bg-white text-left h-10 focus:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-default">
-            <Combobox.Label tabIndex={1} className="px-4 select-none flex items-center justify-between text-main-default cursor-pointer space-x-2 h-8 rounded-sm focus:outline-none">
+          <Combobox.Button
+            tabIndex={1}
+            className="group w-full border rounded-md border-gray-spacer bg-white text-left h-10 focus:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-default"
+          >
+            <Combobox.Label
+              tabIndex={1}
+              className="px-4 select-none flex items-center justify-between text-main-default cursor-pointer space-x-2 h-8 rounded-sm focus:outline-none"
+            >
               <span className="text-sm font-medium text-main-default flex-1 truncate">
                 {selectedOption ? selectedOption.label : placeholder}
               </span>
@@ -106,9 +116,11 @@ export default function AutoComplete({
                 openTop ? 'bottom-11' : 'mt-1'
               )}
             >
-              <div className={classNames(
-                'w-full flex items-center border-b border-gray-spacer px-2 space-x-2 py-2',
-              )}>
+              <div
+                className={classNames(
+                  'w-full flex items-center border-b border-gray-spacer px-2 space-x-2 py-2'
+                )}
+              >
                 <Search className="w-4 h-4 text-main-l2" />
                 <Combobox.Input
                   className="border-none text-sm text-main-default focus:outline-none focus:ring-0 h-8 placeholder:text-main-l2 w-full"
@@ -122,11 +134,7 @@ export default function AutoComplete({
                     Nothing found.
                   </div>
                 ) : (
-                  <div
-                    className={
-                      grouped ? 'divide-y divide-gray-space' : ''
-                    }
-                  >
+                  <div className={grouped ? 'divide-y divide-gray-space' : ''}>
                     {filteredOptions().map((option) => {
                       if (option.options && option.options.length > 0) {
                         return (
