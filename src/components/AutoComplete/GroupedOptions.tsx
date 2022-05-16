@@ -1,13 +1,13 @@
-import { Listbox } from '@headlessui/react';
+import { Combobox } from '@headlessui/react';
 import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-import { DropdownOption } from './Dropdown';
+import { AutoCompleteOption } from './AutoComplete';
 
 interface Props {
-  group: DropdownOption;
-  selectedOption?: DropdownOption;
+  group: AutoCompleteOption;
+  selectedOption?: AutoCompleteOption;
 }
 
 export default function GroupedOptions({ group, selectedOption }: Props) {
@@ -18,7 +18,7 @@ export default function GroupedOptions({ group, selectedOption }: Props) {
       </div>
       {group.options &&
         group.options.map((option) => (
-          <Listbox.Option
+          <Combobox.Option
             key={option.id}
             className={({ active }) =>
               classNames(
@@ -32,7 +32,7 @@ export default function GroupedOptions({ group, selectedOption }: Props) {
             value={option}
           >
             <span className="block truncate font-medium">{option.label}</span>
-          </Listbox.Option>
+          </Combobox.Option>
         ))}
     </div>
   );

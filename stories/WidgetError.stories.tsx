@@ -4,7 +4,7 @@ import WidgetError from "../src/components/WidgetError/WidgetError";
 export default { title: "Widget Error" };
 
 const Template = (args: any) => (
-    <div className="tk-w-96">
+    <div className="w-96">
         <WidgetError>
             {args.message}
         </WidgetError>
@@ -17,7 +17,7 @@ Default.args = {
 }
 
 export const WithRefreshFunction = () => {
-    return <div className="tk-w-96">
+    return <div className="w-96">
         <WidgetError onRefresh={() => null}>
             You have a widget error
         </WidgetError>

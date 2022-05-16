@@ -7,9 +7,9 @@ interface Props {
 
 export default function Loader({ children }: Props) {
   return (
-    <div className="tk-flex tk-flex-1 tk-items-center tk-justify-center tk-flex-col tk-py-20 tk-space-y-4">
+    <div className="flex flex-1 items-center justify-center flex-col py-20 space-y-4">
       <Rings color="hsl(229.3, 63.6%, 56.9%)" height={75} width={75} />
-      <p className="tk-text-sm tk-font-medium tk-text-main-l2">{children}</p>
+      <p className="text-sm font-medium text-main-l2">{children}</p>
     </div>
   );
 }

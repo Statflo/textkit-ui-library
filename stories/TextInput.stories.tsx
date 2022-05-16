@@ -4,7 +4,7 @@ import TextInput from "../src/components/TextInput/TextInput";
 export default { title: "Text Input" };
 
 const Template = (args: any) => (
-    <div className="tk-w-96">
+    <div className="w-96">
         <TextInput
             placeholder={args.placeholder}
             value={args.value}

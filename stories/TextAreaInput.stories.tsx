@@ -4,7 +4,7 @@ import TextAreaInput from "../src/components/TextAreaInput/TextAreaInput";
 export default { title: "Textarea Input" };
 
 const Template = (args: any) => (
-    <div className="tk-w-96">
+    <div className="w-96">
         <TextAreaInput
             placeholder={args.placeholder}
             value={args.value}
