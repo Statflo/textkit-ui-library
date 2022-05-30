@@ -3,15 +3,15 @@ import React from 'react';
 import Icon from '../Icon';
 
 interface BreadcrumbProps {
-  onClick?: () => void;
   isFinal?: boolean;
   label: string;
+  onClick?: () => void;
 }
 
 const Breadcrumb = ({
-  onClick = undefined,
   isFinal = true,
   label,
+  onClick = undefined,
 }: BreadcrumbProps) => (
   <div className="flex gap-1 h-9">
     <button

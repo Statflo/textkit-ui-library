@@ -130,5 +130,18 @@ module.exports = {
         dropdown: '0px 4px 8px rgba(128, 128, 128, 0.2)',
         slider: '0px 1px 4px rgba(128, 128, 128, 0.25)',
         alert: '0px 8px 16px rgba(128, 128, 128, 0.25)',
+    },
+    opacity: {
+        15: '0.15',
+    },
+    spacing: {
+        22: '5.5rem',
+        84: '21rem',
+        88: '22rem',
+        100: '25rem',
+        124: '31rem',
+
+        sub4: 'calc(100% - 1rem)',
+        sub7: 'calc(100% - 1.75rem)',
     }
 };

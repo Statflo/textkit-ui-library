@@ -6,7 +6,7 @@ export default {
     component: Button,
     decorators: [
         (Story) => (
-            <div className="items-center flex gap-4">
+            <div className="items-center flex flex-col md:flex-row gap-4">
                 <Story />
             </div>
         )
@@ -23,29 +23,29 @@ const Template = (args: any) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-    label: 'Button Label',
     disabled: false,
     fullWidth: false,
-    variant: 'primary',
     icon: {
         name: 'plus',
         position: 'leading',
     },
+    label: 'Button Label',
+    variant: 'primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-    label: 'Button Label',
     disabled: false,
     fullWidth: false,
+    label: 'Button Label',
     variant: 'secondary',
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-    label: 'Button Label',
     disabled: false,
     fullWidth: false,
+    label: 'Button Label',
     variant: 'tertiary',
 }
 
@@ -55,5 +55,6 @@ Icon.args = {
         name: 'plus',
         position: 'only',
     },
+    label: 'Button Label',
     variant: 'primary',
 }

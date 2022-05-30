@@ -10,12 +10,13 @@ interface IconProps {
     | 'primary'
     | 'white'
     | 'grey'
+    | 'lightGrey'
     | 'info'
     | 'success'
     | 'error'
     | 'warning';
   icon: keyof typeof iconPaths;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'xSmall' | 'small' | 'medium' | 'large';
 }
 
 const Icon = ({
@@ -26,26 +27,45 @@ const Icon = ({
 }: IconProps) => (
   <svg
     className={className}
-    height={size === 'small' ? '16' : size === 'medium' ? '18' : '20'}
-    width={size === 'small' ? '16' : size === 'medium' ? '18' : '20'}
+    height={
+      size === 'xSmall'
+        ? '12'
+        : size === 'small'
+        ? '16'
+        : size === 'medium'
+        ? '18'
+        : '20'
+    }
+    width={
+      size === 'xSmall'
+        ? '12'
+        : size === 'small'
+        ? '16'
+        : size === 'medium'
+        ? '18'
+        : '20'
+    }
     viewBox="0 0 16 16"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path
-      className={classNames(
-        color === 'primary' && 'fill-primary',
-        color === 'white' && 'fill-white',
-        color === 'grey' && 'fill-main-l2',
-        color === 'info' && 'fill-info',
-        color === 'success' && 'fill-success',
-        color === 'error' && 'fill-error',
-        color === 'warning' && 'fill-warning-l1'
-      )}
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d={iconPaths[icon]}
-      fill={color}
-    />
+    {iconPaths[icon].map((path) => (
+      <path
+        className={classNames(
+          color === 'primary' && 'fill-primary',
+          color === 'white' && 'fill-white',
+          color === 'grey' && 'fill-main-l2',
+          color === 'lightGrey' && 'fill-main-l3',
+          color === 'info' && 'fill-info',
+          color === 'success' && 'fill-success',
+          color === 'error' && 'fill-error',
+          color === 'warning' && 'fill-warning-l1'
+        )}
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d={path}
+        fill={color}
+      />
+    ))}
   </svg>
 );
 
