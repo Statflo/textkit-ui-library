@@ -3,7 +3,7 @@ import React from 'react';
 import DateLabel from '../src/components/DateLabel';
 
 export default {
-  title: 'DateLabel',
+  title: 'Date Label',
   component: DateLabel,
 };
 

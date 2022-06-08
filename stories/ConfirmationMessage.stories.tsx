@@ -2,7 +2,7 @@ import React from 'react';
 import ConfirmationMessage from '../src/components/ConfirmationMessage';
 
 export default {
-  title: 'ConfirmationMessage',
+  title: 'Confirmation Message',
   component: ConfirmationMessage,
 };
 

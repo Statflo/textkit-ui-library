@@ -53,12 +53,15 @@ const Icon = ({
         className={classNames(
           color === 'primary' && 'fill-primary',
           color === 'white' && 'fill-white',
-          color === 'grey' && 'fill-main-l2',
-          color === 'lightGrey' && 'fill-main-l3',
+          color === 'grey' &&
+            'fill-main-l2 group-hover-not-disabled:fill-primary-d1',
+          color === 'lightGrey' &&
+            'fill-main-l3 group-hover-not-disabled:fill-primary',
           color === 'info' && 'fill-info',
           color === 'success' && 'fill-success',
           color === 'error' && 'fill-error',
-          color === 'warning' && 'fill-warning-l1'
+          color === 'warning' && 'fill-warning-l1',
+          className ?? ''
         )}
         fillRule="evenodd"
         clipRule="evenodd"

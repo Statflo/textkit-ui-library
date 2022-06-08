@@ -2,7 +2,7 @@ import React from 'react';
 import ChatBubble from '../src/components/ChatBubble';
 
 export default {
-  title: 'ChatBubble',
+  title: 'Chat Bubble',
   component: ChatBubble,
 }
 

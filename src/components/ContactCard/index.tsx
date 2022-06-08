@@ -27,19 +27,27 @@ const ContactCard = ({
   timestamp,
   title,
   unreadMessages = 0,
-}: ContactCardProps) => (
-  <button
-    className={classNames(
-      'flex flex-col h-22 justify-between p-4 relative w-full md:w-88 hover-not-disabled:bg-background-hover',
-      active ? 'bg-primary' : 'bg-background'
-    )}
-    disabled={isLoading}
-    onClick={onClick}
-  >
-    <div className="items-center flex h-5 justify-between w-full">
-      {isLoading ? (
+}: ContactCardProps) =>
+  isLoading ? (
+    <div className="flex flex-col h-22 justify-between p-4 relative w-full md:w-88">
+      <div className="items-center flex h-5 justify-between w-full">
         <div className="bg-background-spacer h-2.5 w-24" />
-      ) : (
+        <div className="bg-background-spacer h-2.5 w-12" />
+      </div>
+      <div className="h-8 w-full">
+        <div className="bg-background-spacer h-2.5 w-full md:w-72" />
+      </div>
+      <div className="bottom-0 bg-background-spacer h-px absolute w-sub4" />
+    </div>
+  ) : (
+    <button
+      className={classNames(
+        'flex flex-col h-22 justify-between p-4 relative w-full md:w-88 hover:bg-background-hover',
+        active ? 'bg-primary' : 'bg-background'
+      )}
+      onClick={onClick}
+    >
+      <div className="items-center flex h-5 justify-between w-full">
         <div className="items-center flex gap-2">
           <p
             className={classNames(
@@ -56,10 +64,6 @@ const ContactCard = ({
             <Icon color="lightGrey" icon="phone-prohibited" size="small" />
           )}
         </div>
-      )}
-      {isLoading ? (
-        <div className="bg-background-spacer h-2.5 w-12" />
-      ) : (
         <span
           className={classNames(
             'text-14',
@@ -68,13 +72,7 @@ const ContactCard = ({
         >
           {formatDistanceToNow(timestamp)} ago
         </span>
-      )}
-    </div>
-    {isLoading ? (
-      <div className="h-8 w-full">
-        <div className="bg-background-spacer h-2.5 w-full md:w-72" />
       </div>
-    ) : (
       <div className="items-center flex gap-2 h-8">
         <p
           className={classNames(
@@ -90,11 +88,10 @@ const ContactCard = ({
           </div>
         )}
       </div>
-    )}
-    {!active && (
-      <div className="bottom-0 bg-background-spacer h-px absolute w-sub4" />
-    )}
-  </button>
-);
+      {!active && (
+        <div className="bottom-0 bg-background-spacer h-px absolute w-sub4" />
+      )}
+    </button>
+  );
 
 export default ContactCard;

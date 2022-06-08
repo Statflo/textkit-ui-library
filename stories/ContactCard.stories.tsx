@@ -2,7 +2,7 @@ import React from 'react';
 import ContactCard from '../src/components/ContactCard';
 
 export default {
-  title: 'ContactCard',
+  title: 'Contact Card',
   component: ContactCard,
 };
 
@@ -12,7 +12,7 @@ const Template = (args: any) => (
 
 export const Unread = Template.bind({});
 Unread.args = {
-  isLoading: true,
+  isLoading: false,
   isSmsCapable: true,
   isVoiceCapable: true,
   title: 'FullName',

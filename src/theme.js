@@ -7,7 +7,7 @@ module.exports = {
     fontSize: {
         10: ['10px', {
             letterSpacing: '0.04em',
-            lineHeight: '18px', // or 15px (bold)
+            lineHeight: '12px', // or 18px (regular/semibold) or 15px (bold)
         }],
         12: ['12px', {
             letterSpacing: '0.03em', // or 0.02em (semibold)
@@ -47,7 +47,7 @@ module.exports = {
         }],
     },
     fontWeight: {
-        normal: 400,
+        regular: 400,
         semibold: 500,
         bold: 700,
     },
@@ -56,6 +56,7 @@ module.exports = {
         navy: '#293C89',
         magenta: '#E1207B',
         teal: '#3FB8C0',
+
         // Primary Colors
         white: '#FFFFFF',
         primary: {
@@ -98,6 +99,7 @@ module.exports = {
             l1: '#8EACFB',
             l2: '#EBF1FF',
         },
+
         // Secondary Colors
         stark: '#4B9BFF',
         martell: '#50B2A0',
@@ -123,13 +125,14 @@ module.exports = {
         modal: '0px 4px 10px rgba(128, 128, 128, 0.3)',
         tooltip: '0px 2px 4px rgba(128, 128, 128, 0.25)',
         popover: '0px 8px 16px rgba(128, 128, 128, 0.25)',
-        card: {
-            DEFAULT: '0px 2px 16px rgba(128, 128, 128, 0.25)',
-            drag: '0px 8px 16px rgba(128, 128, 128, 0.25)',
-        },
+        card: '0px 2px 16px rgba(128, 128, 128, 0.25)',
+        drag: '0px 8px 16px rgba(128, 128, 128, 0.25)',
         dropdown: '0px 4px 8px rgba(128, 128, 128, 0.2)',
         slider: '0px 1px 4px rgba(128, 128, 128, 0.25)',
         alert: '0px 8px 16px rgba(128, 128, 128, 0.25)',
+    },
+    minWidth: {
+        4: '1rem',
     },
     opacity: {
         15: '0.15',

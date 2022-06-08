@@ -47,15 +47,15 @@ const Button = ({
         variant === 'primary' &&
           (active
             ? 'bg-primary-d2 text-white'
-            : 'bg-primary text-white disabled:bg-primary-l1 hover:bg-primary-d1'),
+            : 'bg-primary text-white disabled:bg-primary-l1 hover-not-disabled:bg-primary-d1'),
         variant === 'secondary' &&
           (active
             ? 'bg-primary-d1/15 border border-primary-d2 text-primary-d2'
-            : 'bg-white border border-primary text-primary disabled:border-primary-l1 disabled:text-primary-l1 hover:bg-primary-d1/10 hover:border-primary-d2 hover:text-primary-d1'),
+            : 'bg-white border border-primary text-primary disabled:border-primary-l1 disabled:text-primary-l1 hover-not-disabled:bg-primary-d1/10 hover-not-disabled:border-primary-d2 hover-not-disabled:text-primary-d1'),
         variant === 'tertiary' &&
           (active
             ? 'bg-primary-d1/15 text-primary-d2'
-            : 'text-primary disabled:text-primary-l1 hover:bg-primary-d1/10 hover:text-primary-d1'),
+            : 'text-primary disabled:text-primary-l1 hover-not-disabled:bg-primary-d1/10 hover-not-disabled:text-primary-d1'),
         fullWidth ? 'w-full' : '',
         className ?? ''
       )}
@@ -63,11 +63,31 @@ const Button = ({
       {...otherProps}
     >
       {(icon?.position === 'leading' || icon?.position === 'only') && (
-        <Icon color="white" icon={icon.name} size="small" />
+        <Icon
+          color={
+            variant === 'primary'
+              ? 'white'
+              : variant === 'secondary'
+              ? 'primary'
+              : 'lightGrey'
+          }
+          icon={icon.name}
+          size="small"
+        />
       )}
       {icon?.position !== 'only' && label}
       {icon?.position === 'trailing' && (
-        <Icon color="white" icon={icon.name} size="small" />
+        <Icon
+          color={
+            variant === 'primary'
+              ? 'white'
+              : variant === 'secondary'
+              ? 'primary'
+              : 'lightGrey'
+          }
+          icon={icon.name}
+          size="small"
+        />
       )}
     </button>
   );

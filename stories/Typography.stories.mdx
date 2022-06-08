@@ -1,0 +1,48 @@
+import { Meta, Typeset } from '@storybook/addon-docs';
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    primary: '"Brandon Text", sans-serif',
+  },
+  weight: {
+    regular: 400,
+    semibold: 500,
+    bold: 700,
+  },
+  sizes: [10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40],
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+# Typography
+
+**Font:** Brandon Text
+
+**400 (Regular)**
+
+<Typeset
+  fontSizes={typography.sizes}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**500 (Semibold)**
+
+<Typeset
+  fontSizes={typography.sizes}
+  fontWeight={typography.weight.semibold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**700 (Bold)**
+
+<Typeset
+  fontSizes={typography.sizes}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

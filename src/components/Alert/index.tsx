@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion/dist/framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 
 import { classNames } from '../../utils/classnames';
@@ -6,7 +6,7 @@ import Icon from '../Icon';
 
 interface AlertProps {
   isOpen: boolean;
-  message: string;
+  alertText: string;
   onClose: () => void;
   status?: 'neutral' | 'success' | 'info' | 'warning' | 'error';
   type?: 'toast' | 'embedded' | 'stripe';
@@ -14,7 +14,7 @@ interface AlertProps {
 
 const Alert = ({
   isOpen,
-  message,
+  alertText,
   onClose,
   status = 'neutral',
   type = 'toast',
@@ -62,14 +62,14 @@ const Alert = ({
           )}
         >
           {status === 'info'
-            ? `Info: ${message}`
+            ? `Info: ${alertText}`
             : status === 'success'
-            ? `Success: ${message}`
+            ? `Success: ${alertText}`
             : status === 'error'
-            ? `Error: ${message}`
+            ? `Error: ${alertText}`
             : status === 'warning'
-            ? `Warning: ${message}`
-            : message}
+            ? `Warning: ${alertText}`
+            : alertText}
         </span>
         <button aria-label="Close" onClick={onClose}>
           <Icon

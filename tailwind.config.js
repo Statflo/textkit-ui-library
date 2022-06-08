@@ -17,6 +17,7 @@ module.exports = {
       addVariant('hover-not-disabled', '&:hover:not([disabled])')
       addVariant('hocus', ['&:hover, &:focus'])
       addVariant('hocus-not-disabled', ['&:hover:not([disabled]), &:focus'])
+      addVariant('group-hover-not-disabled', ':merge(.group):hover:not([disabled]) &')
     })
   ],
 }
