@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatBubble from '../src/components/ChatBubble';
+import ChatBubble from '../src/components/ChatBubble/ChatBubble';
 
 export default {
   title: 'Chat Bubble',

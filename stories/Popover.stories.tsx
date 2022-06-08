@@ -1,5 +1,5 @@
 import React from 'react';
-import Popover from '../src/components/Popover';
+import Popover from '../src/components/Popover/Popover';
 
 export default {
   title: "Popover",

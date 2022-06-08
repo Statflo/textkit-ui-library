@@ -3,7 +3,7 @@ import React from 'react';
 import LinesEllipsis from 'react-lines-ellipsis';
 
 import { classNames } from '../../utils/classnames';
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 
 interface ContactCardProps {
   active?: boolean;

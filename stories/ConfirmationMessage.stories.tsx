@@ -1,5 +1,5 @@
 import React from 'react';
-import ConfirmationMessage from '../src/components/ConfirmationMessage';
+import ConfirmationMessage from '../src/components/ConfirmationMessage/ConfirmationMessage';
 
 export default {
   title: 'Confirmation Message',

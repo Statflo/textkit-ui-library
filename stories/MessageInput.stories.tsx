@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MessageInput from '../src/components/MessageInput';
+import MessageInput from '../src/components/MessageInput/MessageInput';
 
 export default {
   title: "Message Input",

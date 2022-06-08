@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Pagination from '../src/components/Pagination';
+import Pagination from '../src/components/Pagination/Pagination';
 
 export default {
   title: "Pagination",

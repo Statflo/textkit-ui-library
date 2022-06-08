@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 
 import { classNames } from '../../utils/classnames';
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 
 interface AlertProps {
   isOpen: boolean;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { classNames } from '../../utils/classnames';
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {

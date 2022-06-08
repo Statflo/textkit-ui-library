@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactCard from '../src/components/ContactCard';
+import ContactCard from '../src/components/ContactCard/ContactCard';
 
 export default {
   title: 'Contact Card',

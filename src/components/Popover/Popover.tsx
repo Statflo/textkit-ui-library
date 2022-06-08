@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { classNames } from '../../utils/classnames';
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 
 interface PopoverProps {
   content: {

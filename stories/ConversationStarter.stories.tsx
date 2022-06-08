@@ -1,5 +1,5 @@
 import React from 'react';
-import ConversationStarter from '../src/components/ConversationStarter';
+import ConversationStarter from '../src/components/ConversationStarter/ConversationStarter';
 
 export default {
   title: 'Conversation Starter',

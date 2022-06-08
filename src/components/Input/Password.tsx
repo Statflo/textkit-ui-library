@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 
 import Input, { InputProps } from './Default';
 

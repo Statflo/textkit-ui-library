@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import React from 'react';
 
 import { classNames } from '../../utils/classnames';
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 import RotatingLines from '../Loader/RotatingLines';
 
 interface ChatBubbleProps {

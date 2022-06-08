@@ -1,6 +1,6 @@
 import { subDays } from 'date-fns';
 import React from 'react';
-import DateLabel from '../src/components/DateLabel';
+import DateLabel from '../src/components/DateLabel/DateLabel';
 
 export default {
   title: 'Date Label',

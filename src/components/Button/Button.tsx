@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { classNames } from '../../utils/classnames';
-import Icon, { iconPaths } from '../Icon';
+import Icon, { iconPaths } from '../Icon/Icon';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
