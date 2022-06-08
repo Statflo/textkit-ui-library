@@ -16,7 +16,7 @@ interface IconProps {
     | 'error'
     | 'warning';
   icon: keyof typeof iconPaths;
-  size?: 'xSmall' | 'small' | 'medium' | 'large';
+  size?: 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large';
 }
 
 const Icon = ({
@@ -28,7 +28,9 @@ const Icon = ({
   <svg
     className={className}
     height={
-      size === 'xSmall'
+      size === 'xxSmall'
+        ? '8'
+        : size === 'xSmall'
         ? '12'
         : size === 'small'
         ? '16'
@@ -37,7 +39,9 @@ const Icon = ({
         : '20'
     }
     width={
-      size === 'xSmall'
+      size === 'xxSmall'
+        ? '8'
+        : size === 'xSmall'
         ? '12'
         : size === 'small'
         ? '16'
