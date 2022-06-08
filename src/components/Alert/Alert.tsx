@@ -5,16 +5,21 @@ import { classNames } from '../../utils/classnames';
 import Icon from '../Icon/Icon';
 
 interface AlertProps {
+  /** Whether the alert is open or not */
   isOpen: boolean;
-  alertText: string;
+  /** The display text */
+  text: string;
+  /** Callback function to run when the close button is clicked */
   onClose: () => void;
+  /** The alert's status */
   status?: 'neutral' | 'success' | 'info' | 'warning' | 'error';
+  /** The alert's type */
   type?: 'toast' | 'embedded' | 'stripe';
 }
 
 const Alert = ({
   isOpen,
-  alertText,
+  text,
   onClose,
   status = 'neutral',
   type = 'toast',
@@ -62,14 +67,14 @@ const Alert = ({
           )}
         >
           {status === 'info'
-            ? `Info: ${alertText}`
+            ? `Info: ${text}`
             : status === 'success'
-            ? `Success: ${alertText}`
+            ? `Success: ${text}`
             : status === 'error'
-            ? `Error: ${alertText}`
+            ? `Error: ${text}`
             : status === 'warning'
-            ? `Warning: ${alertText}`
-            : alertText}
+            ? `Warning: ${text}`
+            : text}
         </span>
         <button aria-label="Close" onClick={onClose}>
           <Icon

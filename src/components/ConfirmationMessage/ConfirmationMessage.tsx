@@ -27,8 +27,12 @@ const ConfirmationMessage = ({
     {label && <p className="text-main text-20 font-bold">{label}</p>}
     <p className="text-main text-16">{content}</p>
     <div className="items-center flex gap-4 justify-end">
-      <Button label="Cancel" onClick={onCancel} variant="tertiary" />
-      <Button label="Confirm" onClick={onConfirm} variant="primary" />
+      <Button onClick={onCancel} variant="tertiary">
+        Cancel
+      </Button>
+      <Button onClick={onConfirm} variant="primary">
+        Confirm
+      </Button>
     </div>
   </div>
 );

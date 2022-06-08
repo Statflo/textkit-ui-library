@@ -2,11 +2,8 @@ import React from 'react';
 import Alert from '../src/components/Alert/Alert';
 
 export default {
-  title: 'Alert',
+  title: 'Components/Alert',
   component: Alert,
-  args: {
-    isOpen: true,
-  },
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4">
@@ -22,7 +19,8 @@ const DefaultTemplate = (args: any) => (
 
 export const Default = DefaultTemplate.bind({});
 Default.args = {
-  alertText: 'Spicy jalapeno bacon ipsum dolor amet chislic proident officia spare ribs',
+  text: 'Spicy jalapeno bacon ipsum dolor amet chislic proident officia spare ribs',
+  isOpen: true,
 };
 
 const StatusTemplate = (args: any) => (
@@ -38,7 +36,6 @@ const StatusTemplate = (args: any) => (
 export const Statuses = StatusTemplate.bind({});
 Statuses.args = {
   ...Default.args,
-  isOpen: true,
 };
 
 const TypeTemplate = (args: any) => (
@@ -52,5 +49,4 @@ const TypeTemplate = (args: any) => (
 export const Types = TypeTemplate.bind({});
 Types.args = {
   ...Default.args,
-  isOpen: true,
 };

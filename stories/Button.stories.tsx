@@ -2,59 +2,61 @@ import React from "react";
 import Button from "../src/components/Button/Button";
 
 export default {
-    title: "Button",
-    component: Button,
-    decorators: [
-        (Story) => (
-            <div className="items-center flex flex-col md:flex-row gap-4">
-                <Story />
-            </div>
-        )
-    ]
+  title: 'Components/Button',
+  component: Button,
+  decorators: [
+    (Story) => (
+      <div className="items-center flex gap-4">
+        <Story />
+      </div>
+    )
+  ]
 };
 
-const Template = (args: any) => (
+const DefaultTemplate = (args: any) => (
+  <Button {...args} />
+);
+
+export const Default = DefaultTemplate.bind({});
+Default.args = {
+    children: 'Button',
+};
+
+export const Variants = (args: any) => (
     <>
-        <Button {...args} size="small" />
-        <Button {...args} size="medium" />
-        <Button {...args} size="large" />
+        <Button {...args} variant="primary">Primary</Button>
+        <Button {...args} variant="secondary">Secondary</Button>
+        <Button {...args} variant="tertiary">Tertiary</Button>
     </>
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
-    disabled: false,
-    fullWidth: false,
-    icon: {
-        name: 'plus',
-        position: 'leading',
-    },
-    label: 'Button Label',
-    variant: 'primary',
-};
+export const Sizes = (args: any) => (
+    <>
+        <Button {...args} size="large">Large</Button>
+        <Button {...args} size="medium">Medium</Button>
+        <Button {...args} size="small">Small</Button>
+    </>
+);
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-    disabled: false,
-    fullWidth: false,
-    label: 'Button Label',
-    variant: 'secondary',
-};
+export const Disabled = (args: any) => (
+    <>
+        <Button {...args} disabled variant="primary">Primary</Button>
+        <Button {...args} disabled variant="secondary">Secondary</Button>
+        <Button {...args} disabled variant="tertiary">Tertiary</Button>
+    </>
+);
 
-export const Tertiary = Template.bind({});
-Tertiary.args = {
-    disabled: false,
-    fullWidth: false,
-    label: 'Button Label',
-    variant: 'tertiary',
-}
+export const Active = (args: any) => (
+    <>
+        <Button {...args} active variant="primary">Primary</Button>
+        <Button {...args} active variant="secondary">Secondary</Button>
+        <Button {...args} active variant="tertiary">Tertiary</Button>
+    </>
+);
 
-export const Icon = Template.bind({});
-Icon.args = {
-    icon: {
-        name: 'plus',
-        position: 'only',
-    },
-    label: 'Button Label',
-    variant: 'primary',
-}
+export const Icons = (args: any) => (
+    <>
+        <Button {...args} trailingIcon="smile">Trailing Icon</Button>
+        <Button {...args} leadingIcon="smile">Leading Icon</Button>
+    </>
+)

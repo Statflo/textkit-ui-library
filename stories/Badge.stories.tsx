@@ -2,57 +2,44 @@ import React from 'react';
 import Badge from '../src/components/Badge/Badge';
 
 export default {
-  title: 'Badge',
+  title: 'Components/Badge',
   component: Badge,
-  args: {
-    label: '123',
-  },
   decorators: [
     (Story) => (
-      <div className="flex gap-4">
+      <div className="flex gap-8">
         <Story />
       </div>
     )
   ]
 };
 
+const DefaultTemplate = (args: any) => (
+  <Badge {...args} />
+);
+
+export const Default = DefaultTemplate.bind({});
+Default.args = {
+  text: '123',
+};
+
 const Template = (args: any) => (
   <>
-    <Badge {...args} isFilled={true} />
-    <Badge {...args} isFilled={false} />
+    <Badge {...args} type="primary" />
+    <Badge {...args} type="secondary" />
+    <Badge {...args} type="success" />
+    <Badge {...args} type="warning" />
+    <Badge {...args} type="error" />
+    <Badge {...args} type="info" />
   </>
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
-  type: 'primary',
-}
-
-const SecondaryTemplate = (args: any) => (
-  <Badge {...args} isFilled={true} />
-);
-
-export const Secondary = SecondaryTemplate.bind({});
-Secondary.args = {
-  type: 'secondary',
-}
-
-export const Success = Template.bind({});
-Success.args = {
-  type: 'success',
+export const Filled = Template.bind({});
+Filled.args = {
+  ...Default.args,
 };
 
-export const Info = Template.bind({});
-Info.args = {
-  type: 'info',
-};
-
-export const Warning = Template.bind({});
-Warning.args = {
-  type: 'warning',
-};
-
-export const Error = Template.bind({});
-Error.args = {
-  type: 'error',
+export const Inverse = Template.bind({});
+Inverse.args = {
+  ...Default.args,
+  kind: 'inverse',
 };
