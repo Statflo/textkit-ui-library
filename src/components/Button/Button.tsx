@@ -4,7 +4,8 @@ import React, { useCallback } from 'react';
 import { classNames } from '../../utils/classnames';
 import Icon, { iconPaths } from '../Icon/Icon';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Whether the button is active or not */
   active?: boolean;
   /** Aria label to provide information when there is no text */
@@ -22,15 +23,17 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   id?: string;
   /** Name of the icon to render on the left side of the component */
   leadingIcon?: keyof typeof iconPaths;
+  /** Whether there should be padding or not */
+  noSidePadding?: boolean;
   /** Callback function to run when the button is clicked */
   onClick: (e: React.MouseEvent) => void;
-  /** The button's size */
+  /** Size of the button */
   size?: 'small' | 'medium' | 'large';
   /** Name of the icon to render on the right side of the component */
   trailingIcon?: keyof typeof iconPaths;
-  /** The button's type */
+  /** Type of the button */
   type?: 'button' | 'submit' | 'reset';
-  /** The button's variations */
+  /** Variation of the button */
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
@@ -43,12 +46,13 @@ const Button = ({
   disabled = false,
   fullWidth = false,
   leadingIcon,
+  noSidePadding = false,
   onClick,
   size = 'medium',
   trailingIcon,
   type = 'button',
   variant = 'primary',
-}: Props) => {
+}: ButtonProps) => {
   const onButtonClick = useCallback(
     (e) => {
       if (disabled) {
@@ -71,23 +75,24 @@ const Button = ({
     <motion.button
       aria-label={ariaLabel}
       className={classNames(
-        'items-center rounded-md flex font-semibold gap-2 px-4 select-none',
+        'group items-center border rounded-md flex font-semibold gap-2 justify-center select-none',
         size === 'small' && 'h-6',
         size === 'medium' && 'h-8',
         size === 'large' ? 'text-base h-10' : 'text-sm',
         variant === 'primary' &&
           (active
-            ? 'bg-primary-d2 text-white'
-            : 'bg-primary text-white disabled:bg-primary-l1 hocus-not-disabled:bg-primary-d1'),
+            ? 'bg-primary-d2 border-primary-d2 text-white'
+            : 'bg-primary border-primary text-white disabled:bg-primary-l1 disabled:border-primary-l1 hocus-not-disabled:bg-primary-d1'),
         variant === 'secondary' &&
           (active
-            ? 'bg-primary-d1/15 border border-primary-d2 text-primary-d2'
-            : 'bg-white border border-primary text-primary disabled:border-primary-l1 disabled:text-primary-l1 hocus-not-disabled:bg-primary-d1/10 hocus-not-disabled:border-primary-d2 hocus-not-disabled:text-primary-d1'),
+            ? 'bg-primary-d1/15 border-primary-d2 text-primary-d2'
+            : 'bg-white border-primary text-primary disabled:border-primary-l1 disabled:text-primary-l1 hocus-not-disabled:bg-primary-d1/10 hocus-not-disabled:border-primary-d2 hocus-not-disabled:text-primary-d1'),
         variant === 'tertiary' &&
           (active
-            ? 'bg-primary-d1/15 text-primary-d2'
-            : 'text-primary disabled:text-primary-l1 hocus-not-disabled:bg-primary-d1/10 hocus-not-disabled:text-primary-d1'),
-        fullWidth ? 'w-full' : '',
+            ? 'bg-primary-d1/15 border-transparent text-primary-d2'
+            : 'text-primary border-transparent disabled:text-primary-l1 hocus-not-disabled:bg-primary-d1/10 hocus-not-disabled:text-primary-d1'),
+        fullWidth && 'w-full',
+        !noSidePadding && 'px-4',
         className ?? ''
       )}
       disabled={disabled}

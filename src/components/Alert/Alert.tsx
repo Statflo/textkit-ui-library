@@ -3,8 +3,9 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 import Icon from '../Icon/Icon';
+import IconButton from '../IconButton/IconButton';
 
-interface AlertProps {
+export interface AlertProps {
   /** Whether the alert is open or not */
   isOpen: boolean;
   /** The display text */
@@ -76,13 +77,12 @@ const Alert = ({
             ? `Warning: ${text}`
             : text}
         </span>
-        <button aria-label="Close" onClick={onClose}>
-          <Icon
-            color={status === 'neutral' ? 'white' : status}
-            icon="close"
-            size="small"
-          />
-        </button>
+        <IconButton
+          ariaLabel="Close"
+          color={status === 'neutral' ? 'white' : status}
+          icon="close"
+          onClick={onClose}
+        />
       </motion.div>
     )}
   </AnimatePresence>

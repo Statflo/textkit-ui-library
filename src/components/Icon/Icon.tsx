@@ -5,21 +5,23 @@ import { classNames } from '../../utils/classnames';
 import iconPaths from './icons';
 
 interface IconProps {
+  active?: boolean;
   className?: string;
   color?:
     | 'primary'
     | 'white'
     | 'grey'
     | 'lightGrey'
-    | 'info'
     | 'success'
+    | 'warning'
     | 'error'
-    | 'warning';
+    | 'info';
   icon: keyof typeof iconPaths;
   size?: 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large';
 }
 
 const Icon = ({
+  active = false,
   className,
   color = 'primary',
   icon,
@@ -55,16 +57,20 @@ const Icon = ({
     {iconPaths[icon].map((path) => (
       <path
         className={classNames(
-          color === 'primary' && 'fill-primary',
+          color === 'primary' && 'fill-primary group-disabled:fill-primary-l1',
           color === 'white' && 'fill-white',
           color === 'grey' &&
-            'fill-main-l2 group-hover-not-disabled:fill-primary-d1',
+            (active
+              ? 'fill-primary-d2'
+              : 'fill-main-l2 group-hover-not-disabled:fill-primary-d1 group-disabled:fill-main-l3'),
           color === 'lightGrey' &&
-            'fill-main-l3 group-hover-not-disabled:fill-primary',
-          color === 'info' && 'fill-info',
+            (active
+              ? 'fill-primary'
+              : 'fill-main-l3 group-hover-not-disabled:fill-primary'),
           color === 'success' && 'fill-success',
-          color === 'error' && 'fill-error',
           color === 'warning' && 'fill-warning-l1',
+          color === 'error' && 'fill-error',
+          color === 'info' && 'fill-info',
           className ?? ''
         )}
         fillRule="evenodd"

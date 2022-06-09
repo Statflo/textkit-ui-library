@@ -1,5 +1,7 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import Alert from '../src/components/Alert/Alert';
+
+import Alert, { AlertProps } from '../Alert';
 
 export default {
   title: 'Components/Alert',
@@ -9,21 +11,19 @@ export default {
       <div className="flex flex-col gap-4">
         <Story />
       </div>
-    )
-  ]
-};
+    ),
+  ],
+} as ComponentMeta<typeof Alert>;
 
-const DefaultTemplate = (args: any) => (
-  <Alert {...args} />
-);
+const DefaultTemplate = (args: AlertProps) => <Alert {...args} />;
 
-export const Default = DefaultTemplate.bind({});
+export const Default: ComponentStory<typeof Alert> = DefaultTemplate.bind({});
 Default.args = {
-  text: 'Spicy jalapeno bacon ipsum dolor amet chislic proident officia spare ribs',
   isOpen: true,
+  text: 'Spicy jalapeno bacon ipsum dolor amet chislic proident officia spare ribs',
 };
 
-const StatusTemplate = (args: any) => (
+const StatusTemplate = (args: AlertProps) => (
   <>
     <Alert {...args} status="neutral" />
     <Alert {...args} status="success" />
@@ -33,12 +33,12 @@ const StatusTemplate = (args: any) => (
   </>
 );
 
-export const Statuses = StatusTemplate.bind({});
+export const Statuses: ComponentStory<typeof Alert> = StatusTemplate.bind({});
 Statuses.args = {
   ...Default.args,
 };
 
-const TypeTemplate = (args: any) => (
+const TypeTemplate = (args: AlertProps) => (
   <>
     <Alert {...args} type="toast" />
     <Alert {...args} type="embedded" />
@@ -46,7 +46,7 @@ const TypeTemplate = (args: any) => (
   </>
 );
 
-export const Types = TypeTemplate.bind({});
+export const Types: ComponentStory<typeof Alert> = TypeTemplate.bind({});
 Types.args = {
   ...Default.args,
 };
