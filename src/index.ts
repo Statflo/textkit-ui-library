@@ -5,7 +5,7 @@ export { classNames } from './utils/classnames';
 export { default as AutoComplete } from './components/AutoComplete/AutoComplete';
 export { default as Button } from './components/Button/Button';
 export { default as Checkbox } from './components/Checkbox/Checkbox';
-export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup';
+export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup/CheckboxGroup';
 export { default as DatePicker } from './components/DatePicker/DatePicker';
 export {
   default as Dropdown,

@@ -15,14 +15,16 @@ export default {
   ],
 } as ComponentMeta<typeof Button>;
 
-const DefaultTemplate = (args: ButtonProps) => <Button {...args} />;
+const DefaultTemplate: ComponentStory<typeof Button> = (args: ButtonProps) => (
+  <Button {...args} />
+);
 
-export const Default: ComponentStory<typeof Button> = DefaultTemplate.bind({});
+export const Default = DefaultTemplate.bind({});
 Default.args = {
   children: 'Button',
 };
 
-const VariantsTemplate = (args: ButtonProps) => (
+const VariantsTemplate: ComponentStory<typeof Button> = (args: ButtonProps) => (
   <>
     <Button {...args} variant="primary">
       Primary
@@ -36,9 +38,7 @@ const VariantsTemplate = (args: ButtonProps) => (
   </>
 );
 
-export const Variants: ComponentStory<typeof Button> = VariantsTemplate.bind(
-  {}
-);
+export const Variants = VariantsTemplate.bind({});
 
 export const Sizes: ComponentStory<typeof Button> = (args: ButtonProps) => (
   <>
@@ -54,14 +54,12 @@ export const Sizes: ComponentStory<typeof Button> = (args: ButtonProps) => (
   </>
 );
 
-export const Disabled: ComponentStory<typeof Button> = VariantsTemplate.bind(
-  {}
-);
+export const Disabled = VariantsTemplate.bind({});
 Disabled.args = {
   disabled: true,
 };
 
-export const Active: ComponentStory<typeof Button> = VariantsTemplate.bind({});
+export const Active = VariantsTemplate.bind({});
 Active.args = {
   active: true,
 };

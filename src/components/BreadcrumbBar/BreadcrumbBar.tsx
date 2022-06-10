@@ -2,7 +2,7 @@ import React from 'react';
 
 import Icon from '../Icon/Icon';
 
-interface BreadcrumbBarProps {
+export interface BreadcrumbBarProps {
   children: React.ReactNode;
 }
 

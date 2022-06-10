@@ -77,6 +77,7 @@ const Icon = ({
         clipRule="evenodd"
         d={path}
         fill={color}
+        key={path}
       />
     ))}
   </svg>

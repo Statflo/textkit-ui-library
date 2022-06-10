@@ -15,15 +15,17 @@ export default {
   ],
 } as ComponentMeta<typeof Alert>;
 
-const DefaultTemplate = (args: AlertProps) => <Alert {...args} />;
+const DefaultTemplate: ComponentStory<typeof Alert> = (args: AlertProps) => (
+  <Alert {...args} />
+);
 
-export const Default: ComponentStory<typeof Alert> = DefaultTemplate.bind({});
+export const Default = DefaultTemplate.bind({});
 Default.args = {
   isOpen: true,
   text: 'Spicy jalapeno bacon ipsum dolor amet chislic proident officia spare ribs',
 };
 
-const StatusTemplate = (args: AlertProps) => (
+const StatusTemplate: ComponentStory<typeof Alert> = (args: AlertProps) => (
   <>
     <Alert {...args} status="neutral" />
     <Alert {...args} status="success" />
@@ -33,12 +35,12 @@ const StatusTemplate = (args: AlertProps) => (
   </>
 );
 
-export const Statuses: ComponentStory<typeof Alert> = StatusTemplate.bind({});
+export const Statuses = StatusTemplate.bind({});
 Statuses.args = {
   ...Default.args,
 };
 
-const TypeTemplate = (args: AlertProps) => (
+const TypeTemplate: ComponentStory<typeof Alert> = (args: AlertProps) => (
   <>
     <Alert {...args} type="toast" />
     <Alert {...args} type="embedded" />
@@ -46,7 +48,7 @@ const TypeTemplate = (args: AlertProps) => (
   </>
 );
 
-export const Types: ComponentStory<typeof Alert> = TypeTemplate.bind({});
+export const Types = TypeTemplate.bind({});
 Types.args = {
   ...Default.args,
 };

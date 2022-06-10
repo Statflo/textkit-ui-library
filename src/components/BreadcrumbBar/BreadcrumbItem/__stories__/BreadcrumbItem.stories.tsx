@@ -1,14 +1,16 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import BreadcrumbItem from '../src/components/BreadcrumbBar/BreadcrumbItem/BreadcrumbItem';
+
+import BreadcrumbItem, { BreadcrumbItemProps } from '../BreadcrumbItem';
 
 export default {
   title: 'Components/BreadcrumbBar/BreadcrumbItem',
   component: BreadcrumbItem,
-};
+} as ComponentMeta<typeof BreadcrumbItem>;
 
-const Template = (args: any) => (
-  <BreadcrumbItem {...args} />
-);
+const Template: ComponentStory<typeof BreadcrumbItem> = (
+  args: BreadcrumbItemProps
+) => <BreadcrumbItem {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface BreadcrumbItemProps {
+export interface BreadcrumbItemProps {
   /** Should the item be clickable - this should be received from the BreadcrumbBar */
   isClickable?: boolean;
   label: string;
