@@ -13,42 +13,55 @@ export interface CheckboxProps {
   indeterminate?: boolean;
   label: string;
   name?: string;
-  onChange: () => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface CheckProps {
-  checked: boolean;
   indeterminate?: boolean;
 }
 
 const variants = {
-  checked: { pathLength: 1 },
-  unchecked: { pathLength: 0 },
+  checked: {
+    pathLength: 1,
+    transition: {
+      duration: 0.2,
+    },
+  },
+  unchecked: {
+    pathLength: 0,
+    transition: {
+      duration: 0,
+    },
+  },
+  tap: {
+    scale: 0.9,
+    transition: {
+      duration: 0.1,
+    },
+  },
 };
 
-const Check = ({ checked, indeterminate = false }: CheckProps) => {
+const Check = ({ indeterminate = false }: CheckProps) => {
   const pathLength = useMotionValue(0);
   const opacity = useTransform(pathLength, [0.05, 0.15], [0, 1]);
 
   return (
-    <motion.svg
-      animate={checked ? 'checked' : 'unchecked'}
-      className="fill-transparent absolute left-0.5 stroke-white"
-      width="12"
-      height="12"
+    <svg
+      className="fill-transparent absolute stroke-white"
+      width="16"
+      height="16"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <motion.path
-        d={indeterminate ? 'M3 8H13' : 'M1 11L5 15L15 1'}
+        d={indeterminate ? 'M4 8H11.5' : 'M3 10.5L6 13.5L13.5 3'}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
         style={{ pathLength, opacity }}
-        transition={{ duration: 0.2 }}
         variants={variants}
       />
-    </motion.svg>
+    </svg>
   );
 };
 
@@ -64,20 +77,22 @@ const Checkbox = ({
   name,
   onChange,
 }: CheckboxProps) => (
-  <label
+  <motion.label
     className={classNames(
       'group items-center flex gap-3 relative select-none',
       disabled ? 'text-main-l3' : 'text-main hover:cursor-pointer',
       className ?? ''
     )}
+    animate={checked ? 'checked' : 'unchecked'}
+    whileTap={!disabled ? 'tap' : undefined}
   >
-    <input
+    <motion.input
       aria-label={ariaLabel}
       checked={checked}
       className={classNames(
-        'peer appearance-none bg-white border border-background-spacer rounded-sm grid h-4 place-content-center w-4 checked:bg-primary checked:border-primary hover-not-disabled:cursor-pointer hover-not-disabled:checked:bg-primary-d1 hover:checked:border-primary-d1  disabled:checked:bg-[#AEB8EA] disabled:checked:border-[#AEB8EA] disabled:bg-background-secondary',
+        'appearance-none bg-white border border-background-spacer rounded-sm h-4 w-4 checked:bg-primary checked:border-primary hover-not-disabled:cursor-pointer hover-not-disabled:checked:bg-primary-d1 hover-not-disabled:checked:border-primary-d1 disabled:checked:bg-[#AEB8EA] disabled:checked:border-[#AEB8EA] disabled:bg-background-secondary',
         !disabled &&
-          'group-hover:cursor-pointer group-hover:border-main-l1 group-hover:checked:bg-primary-d1 group-hover:checked:border-primary-d1'
+          'group-hover:cursor-pointer group-hover:border-main-l2 group-hover:checked:bg-primary-d1 group-hover:checked:border-primary-d1'
       )}
       defaultChecked={defaultChecked}
       disabled={disabled}
@@ -85,10 +100,11 @@ const Checkbox = ({
       name={name}
       onChange={onChange}
       type="checkbox"
+      variants={variants}
     />
-    <Check checked={checked} indeterminate={indeterminate} />
+    <Check indeterminate={indeterminate} />
     {label}
-  </label>
+  </motion.label>
 );
 
 export default Checkbox;

@@ -82,7 +82,7 @@ const Button = ({
         variant === 'primary' &&
           (active
             ? 'bg-primary-d2 border-primary-d2 text-white'
-            : 'bg-primary border-primary text-white disabled:bg-primary-l1 disabled:border-primary-l1 hocus-not-disabled:bg-primary-d1'),
+            : 'bg-primary border-primary text-white disabled:bg-primary-l1 disabled:border-primary-l1 hocus-not-disabled:bg-primary-d1 hocus-not-disabled:border-primary-d1'),
         variant === 'secondary' &&
           (active
             ? 'bg-primary-d1/15 border-primary-d2 text-primary-d2'

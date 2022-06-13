@@ -33,12 +33,7 @@ module.exports = {
   typescript: {
     check: true, // type-check stories during Storybook build
   },
-  webpackFinal: async (config, { configType }) => {
-    config.module.rules.push({
-      test: /\.mjs$/,
-      include: /node_modules/,
-      type: "javascript/auto",
-    })
-    return config;
+  core: {
+    builder: 'webpack5',
   },
 };
