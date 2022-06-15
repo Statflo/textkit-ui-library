@@ -3,6 +3,7 @@ import React from 'react';
 import { classNames } from '../../utils/classnames';
 import Button from '../Button/Button';
 import Icon, { iconPaths } from '../Icon/Icon';
+import Tooltip from '../Tooltip/Tooltip';
 
 export interface IconButtonProps {
   /** Whether the button is active or not */
@@ -46,36 +47,40 @@ const IconButton = ({
   onClick,
   size = 'medium',
   variant = 'tertiary',
-}: IconButtonProps) => (
-  <Button
-    active={active}
-    ariaLabel={ariaLabel}
-    className={classNames(
-      size === 'small' && 'w-6',
-      size === 'medium' && 'w-8',
-      size === 'large' && 'w-10',
-      className ?? ''
-    )}
-    disabled={disabled}
-    id={id}
-    noSidePadding
-    onClick={onClick}
-    size={size}
-    variant={variant}
-  >
-    <Icon
-      active={active}
-      color={
-        variant === 'primary'
-          ? 'white'
-          : variant === 'secondary'
-          ? 'primary'
-          : color
-      }
-      icon={icon}
-      size={size === 'small' ? 'xSmall' : 'small'}
-    />
-  </Button>
-);
+}: IconButtonProps) => {
+  return (
+    <Tooltip text={ariaLabel}>
+      <Button
+        active={active}
+        ariaLabel={ariaLabel}
+        className={classNames(
+          size === 'small' && 'w-6',
+          size === 'medium' && 'w-8',
+          size === 'large' && 'w-10',
+          className ?? ''
+        )}
+        disabled={disabled}
+        id={id}
+        noSidePadding
+        onClick={onClick}
+        size={size}
+        variant={variant}
+      >
+        <Icon
+          active={active}
+          color={
+            variant === 'primary'
+              ? 'white'
+              : variant === 'secondary'
+              ? 'primary'
+              : color
+          }
+          icon={icon}
+          size={size === 'small' ? 'xSmall' : 'small'}
+        />
+      </Button>
+    </Tooltip>
+  );
+};
 
 export default IconButton;

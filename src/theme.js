@@ -131,6 +131,9 @@ module.exports = {
         slider: '0px 1px 4px rgba(128, 128, 128, 0.25)',
         alert: '0px 8px 16px rgba(128, 128, 128, 0.25)',
     },
+    maxWidth: {
+        40: '10rem',
+    },
     minWidth: {
         4: '1rem',
     },
@@ -138,6 +141,7 @@ module.exports = {
         15: '0.15',
     },
     spacing: {
+        15: '3.75rem',
         22: '5.5rem',
         84: '21rem',
         88: '22rem',

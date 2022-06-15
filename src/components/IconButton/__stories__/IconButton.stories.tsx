@@ -27,9 +27,9 @@ Default.args = {
 
 const VariantsTemplate = (args: IconButtonProps) => (
   <>
-    <IconButton {...args} variant="primary" />
-    <IconButton {...args} variant="secondary" />
-    <IconButton {...args} variant="tertiary" />
+    <IconButton {...args} ariaLabel="Primary" variant="primary" />
+    <IconButton {...args} ariaLabel="Secondary" variant="secondary" />
+    <IconButton {...args} ariaLabel="Tertiary" variant="tertiary" />
   </>
 );
 
@@ -41,9 +41,9 @@ Variants.args = {
 
 const SizesTemplate = (args: any) => (
   <>
-    <IconButton {...args} size="small" />
-    <IconButton {...args} size="medium" />
-    <IconButton {...args} size="large" />
+    <IconButton {...args} ariaLabel="Small" size="small" />
+    <IconButton {...args} ariaLabel="Medium" size="medium" />
+    <IconButton {...args} ariaLabel="Large" size="large" />
   </>
 );
 
@@ -70,16 +70,16 @@ Active.args = {
 
 const ColorsTemplate = (args: IconButtonProps) => (
   <>
-    <IconButton {...args} color="primary" />
+    <IconButton {...args} ariaLabel="Primary" color="primary" />
     <div className="bg-main-l1 rounded-md">
-      <IconButton {...args} color="white" />
+      <IconButton {...args} ariaLabel="White" color="white" />
     </div>
-    <IconButton {...args} color="grey" />
-    <IconButton {...args} color="lightGrey" />
-    <IconButton {...args} color="success" />
-    <IconButton {...args} color="warning" />
-    <IconButton {...args} color="error" />
-    <IconButton {...args} color="info" />
+    <IconButton {...args} ariaLabel="Grey" color="grey" />
+    <IconButton {...args} ariaLabel="Light Grey" color="lightGrey" />
+    <IconButton {...args} ariaLabel="Success" color="success" />
+    <IconButton {...args} ariaLabel="Warning" color="warning" />
+    <IconButton {...args} ariaLabel="Error" color="error" />
+    <IconButton {...args} ariaLabel="Info" color="info" />
   </>
 );
 
