@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ConversationStarterProps {
+export interface ConversationStarterProps {
   campaignName: string;
   template: string[];
   variables: {

@@ -2,7 +2,8 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface TextInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: boolean;
 }
 
@@ -10,7 +11,7 @@ export default function TextInput({
   error = false,
   className,
   ...otherProps
-}: Props) {
+}: TextInputProps) {
   return (
     <input
       className={classNames(

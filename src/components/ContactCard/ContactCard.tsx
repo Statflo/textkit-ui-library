@@ -5,7 +5,7 @@ import LinesEllipsis from 'react-lines-ellipsis';
 import { classNames } from '../../utils/classnames';
 import Icon from '../Icon/Icon';
 
-interface ContactCardProps {
+export interface ContactCardProps {
   active?: boolean;
   isLoading?: boolean;
   isSmsCapable?: boolean;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface BadgeProps {
+export interface BadgeProps {
   /** The badge's kind  */
   kind?: 'filled' | 'inverse';
   /** The display text */
@@ -11,7 +11,6 @@ interface BadgeProps {
   type?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error';
 }
 
-// TODO: Hopefully get the non filled background colours into the colour styles
 const Badge = ({ kind = 'filled', text, type = 'primary' }: BadgeProps) => (
   <div
     className={classNames(

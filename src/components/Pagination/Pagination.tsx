@@ -11,7 +11,7 @@ interface PaginationOptionProps {
   onClick: () => void;
 }
 
-interface PaginationProps {
+export interface PaginationProps {
   canPreviousPage: boolean;
   canNextPage: boolean;
   previousPage: () => void;

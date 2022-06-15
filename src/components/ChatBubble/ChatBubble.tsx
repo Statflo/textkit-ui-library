@@ -5,7 +5,7 @@ import { classNames } from '../../utils/classnames';
 import Icon from '../Icon/Icon';
 import RotatingLines from '../Loader/RotatingLines';
 
-interface ChatBubbleProps {
+export interface ChatBubbleProps {
   content: string;
   onDelete?: () => void;
   onTryAgain?: () => void;

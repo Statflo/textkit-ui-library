@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { classNames } from '../../utils/classnames';
 import Icon from '../Icon/Icon';
 
-interface PopoverProps {
+export interface PopoverProps {
   content: {
     title: string;
     body: string;

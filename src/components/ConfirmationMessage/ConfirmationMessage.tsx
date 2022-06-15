@@ -3,7 +3,7 @@ import React from 'react';
 import { classNames } from '../../utils/classnames';
 import Button from '../Button/Button';
 
-interface ConfirmationMessageProps {
+export interface ConfirmationMessageProps {
   content: string;
   label?: string;
   onCancel: () => void;

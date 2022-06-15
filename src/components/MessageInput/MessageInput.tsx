@@ -1,9 +1,10 @@
 import React, { useLayoutEffect, useRef } from 'react';
 
-import { SendButton } from '../ConversationStarter/SendButton';
 import Icon from '../Icon/Icon';
 
-interface MessageInputProps {
+import { SendButton } from './SendButton';
+
+export interface MessageInputProps {
   onChange: (value: string) => void;
   state: 'default' | 'ready' | 'checkingCompliance' | 'complianceError';
   value: string;

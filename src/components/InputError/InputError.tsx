@@ -2,13 +2,13 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-type Props = React.HtmlHTMLAttributes<HTMLSpanElement>;
+export type InputErrorProps = React.HtmlHTMLAttributes<HTMLSpanElement>;
 
 export default function InputError({
   children,
   className,
   ...otherProps
-}: Props) {
+}: InputErrorProps) {
   return (
     <span
       className={classNames(

@@ -4,7 +4,7 @@ import { classNames } from '../../utils/classnames';
 
 import iconPaths from './icons';
 
-interface IconProps {
+export interface IconProps {
   active?: boolean;
   className?: string;
   color?:

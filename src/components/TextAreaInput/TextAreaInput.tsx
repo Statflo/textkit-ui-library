@@ -2,7 +2,8 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextAreaInputProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: boolean;
 }
 
@@ -10,7 +11,7 @@ export default function TextAreaInput({
   error = false,
   className,
   ...otherProps
-}: Props) {
+}: TextAreaInputProps) {
   return (
     <textarea
       rows={2}

@@ -1,7 +1,7 @@
 import { format, isToday, isYesterday } from 'date-fns';
 import React from 'react';
 
-interface DateLabelProps {
+export interface DateLabelProps {
   date: Date;
   isLong?: boolean;
 }
