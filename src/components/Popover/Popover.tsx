@@ -55,7 +55,7 @@ const Popover = ({
               disabled={index === 0}
               onClick={() => setIndex((prevIndex) => prevIndex - 1)}
             >
-              <Icon color="lightGrey" icon="angle-left" size="xSmall" />
+              <Icon color="lightGrey" icon="angle-left" size="small" />
             </button>
           )}
           {content[index].title}
@@ -66,7 +66,7 @@ const Popover = ({
               disabled={index === content.length - 1}
               onClick={() => setIndex((prevIndex) => prevIndex + 1)}
             >
-              <Icon color="lightGrey" icon="angle-right" size="xSmall" />
+              <Icon color="lightGrey" icon="angle-right" size="small" />
             </button>
           )}
         </div>

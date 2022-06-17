@@ -3,7 +3,7 @@ import React from 'react';
 
 import Stages, { StagesProps } from '../Stages';
 
-export default { title: 'Components/Stages' } as ComponentMeta<typeof Stages>;
+export default { title: 'Data Display/Stages' } as ComponentMeta<typeof Stages>;
 
 const Template: ComponentStory<typeof Stages> = (args: StagesProps) => (
   <div className="w-96">

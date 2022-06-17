@@ -3,7 +3,7 @@ import React from 'react';
 
 import WidgetError, { WidgetErrorProps } from '../WidgetError';
 
-export default { title: 'Components/Widget Error' } as ComponentMeta<
+export default { title: 'Widgets/Widget Error' } as ComponentMeta<
   typeof WidgetError
 >;
 

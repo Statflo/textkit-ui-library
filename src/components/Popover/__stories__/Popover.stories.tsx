@@ -4,7 +4,7 @@ import React from 'react';
 import Popover, { PopoverProps } from '../Popover';
 
 export default {
-  title: 'Components/Popover',
+  title: 'Popover/Popover',
   component: Popover,
 } as ComponentMeta<typeof Popover>;
 

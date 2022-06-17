@@ -4,7 +4,7 @@ import React from 'react';
 import Button, { ButtonProps } from '../Button';
 
 export default {
-  title: 'Components/Buttons/Button',
+  title: 'Buttons/Button',
   component: Button,
   decorators: [
     (Story) => (

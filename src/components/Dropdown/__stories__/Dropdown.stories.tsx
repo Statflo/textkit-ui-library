@@ -2,7 +2,7 @@ import React from 'react';
 
 import Dropdown from '../Dropdown';
 
-export default { title: 'Components/Dropdown' };
+export default { title: 'Inputs/Dropdown' };
 
 export const Empty = () => {
   return (

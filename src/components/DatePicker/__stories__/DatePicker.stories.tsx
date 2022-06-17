@@ -2,7 +2,7 @@ import React from 'react';
 
 import DatePicker from '../DatePicker';
 
-export default { title: 'Components/Date Picker' };
+export default { title: 'Inputs/Date Picker' };
 
 export const Default = () => {
   return (

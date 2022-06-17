@@ -4,7 +4,7 @@ import React from 'react';
 import Badge, { BadgeProps } from '../Badge';
 
 export default {
-  title: 'Components/Badge',
+  title: 'Data Display/Badge',
   component: Badge,
   decorators: [
     (Story) => (

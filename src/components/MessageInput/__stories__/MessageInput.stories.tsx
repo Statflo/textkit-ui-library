@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import MessageInput, { MessageInputProps } from '../MessageInput';
 
 export default {
-  title: 'Components/Message Input',
+  title: 'Messaging/Message Input',
   component: MessageInput,
   argTypes: {
     value: {

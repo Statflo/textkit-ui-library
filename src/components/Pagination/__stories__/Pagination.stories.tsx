@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Pagination, { PaginationProps } from '../Pagination';
 
 export default {
-  title: 'Components/Pagination',
+  title: 'Data Display/Pagination',
   component: Pagination,
   argTypes: {
     canPreviousPage: {

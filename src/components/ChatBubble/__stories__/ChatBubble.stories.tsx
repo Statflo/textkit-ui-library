@@ -4,7 +4,7 @@ import React from 'react';
 import ChatBubble, { ChatBubbleProps } from '../ChatBubble';
 
 export default {
-  title: 'Components/Chat Bubble',
+  title: 'Messaging/Chat Bubble',
   component: ChatBubble,
 } as ComponentMeta<typeof ChatBubble>;
 

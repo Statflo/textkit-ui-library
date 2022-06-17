@@ -15,9 +15,10 @@ export interface IconProps {
     | 'success'
     | 'warning'
     | 'error'
-    | 'info';
+    | 'info'
+    | 'current';
   icon: keyof typeof iconPaths;
-  size?: 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | number;
 }
 
 const Icon = ({
@@ -28,28 +29,27 @@ const Icon = ({
   size = 'medium',
 }: IconProps) => (
   <svg
-    className={className}
+    className={classNames(
+      color === 'current' && 'fill-current',
+      className ?? ''
+    )}
     height={
-      size === 'xxSmall'
-        ? '8'
-        : size === 'xSmall'
+      size === 'small'
         ? '12'
-        : size === 'small'
-        ? '16'
         : size === 'medium'
-        ? '18'
-        : '20'
+        ? '16'
+        : size === 'large'
+        ? '20'
+        : size
     }
     width={
-      size === 'xxSmall'
-        ? '8'
-        : size === 'xSmall'
+      size === 'small'
         ? '12'
-        : size === 'small'
-        ? '16'
         : size === 'medium'
-        ? '18'
-        : '20'
+        ? '16'
+        : size === 'large'
+        ? '20'
+        : size
     }
     viewBox="0 0 16 16"
     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,6 @@ const Icon = ({
         fillRule="evenodd"
         clipRule="evenodd"
         d={path}
-        fill={color}
         key={path}
       />
     ))}

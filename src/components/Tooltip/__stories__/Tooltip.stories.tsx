@@ -5,7 +5,7 @@ import { classNames } from '../../../utils/classnames';
 import Tooltip, { TooltipProps } from '../Tooltip';
 
 export default {
-  title: 'Components/Tooltip',
+  title: 'Popover/Tooltip',
   component: Tooltip,
   args: {
     shouldDismissOnClick: false,
@@ -38,7 +38,7 @@ const DefaultTemplate: ComponentStory<typeof Tooltip> = (
     )}
   >
     <Tooltip {...args}>
-      <div className="h-px w-px" />
+      <div aria-hidden={true} className="h-px invisible w-px" />
     </Tooltip>
   </div>
 );

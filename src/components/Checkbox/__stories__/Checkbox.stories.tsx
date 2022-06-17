@@ -5,7 +5,7 @@ import Checkbox, { CheckboxProps } from '../Checkbox';
 import CheckboxGroup from '../CheckboxGroup/CheckboxGroup';
 
 export default {
-  title: 'Components/Checkbox',
+  title: 'Inputs/Checkbox',
   component: Checkbox,
   decorators: [
     (Story) => (

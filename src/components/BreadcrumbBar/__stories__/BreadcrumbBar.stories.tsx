@@ -6,7 +6,7 @@ import BreadcrumbItem from '../BreadcrumbItem/BreadcrumbItem';
 import { Default as BreadcrumbItemStory } from '../BreadcrumbItem/__stories__/BreadcrumbItem.stories';
 
 export default {
-  title: 'Components/BreadcrumbBar/BreadcrumbBar',
+  title: 'Navigation/BreadcrumbBar/BreadcrumbBar',
   component: BreadcrumbBar,
 } as ComponentMeta<typeof BreadcrumbBar>;
 

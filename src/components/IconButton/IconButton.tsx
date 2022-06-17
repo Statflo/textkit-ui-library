@@ -76,7 +76,7 @@ const IconButton = ({
               : color
           }
           icon={icon}
-          size={size === 'small' ? 'xSmall' : 'small'}
+          size={size === 'small' ? 'small' : 'medium'}
         />
       </Button>
     </Tooltip>

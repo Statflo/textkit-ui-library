@@ -3,7 +3,7 @@ import React from 'react';
 
 import Loader from '../Loader';
 
-export default { title: 'Components/Loader' } as ComponentMeta<typeof Loader>;
+export default { title: 'Feedback/Loader' } as ComponentMeta<typeof Loader>;
 
 const Template: ComponentStory<typeof Loader> = (args: any) => (
   <div className="w-96">

@@ -18,6 +18,6 @@ export { default as Loader } from './components/Loader/Loader';
 export { default as Segment } from './components/Segment/Segment';
 export { default as Stages } from './components/Stages/Stages';
 export { default as Tag } from './components/Tag/Tag';
-export { default as TextAreaInput } from './components/TextAreaInput/TextAreaInput';
+export { default as TextArea } from './components/TextArea/TextArea';
 export { default as TextInput } from './components/TextInput/TextInput';
 export { default as WidgetError } from './components/WidgetError/WidgetError';

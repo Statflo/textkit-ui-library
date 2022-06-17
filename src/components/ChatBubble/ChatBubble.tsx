@@ -41,7 +41,7 @@ const ChatBubble = ({
           className="items-center bg-background-navigation border border-background-spacer rounded-xl flex h-6 justify-center absolute -right-2.5 -top-2.5 w-6"
           onClick={onDelete}
         >
-          <Icon color="lightGrey" icon="close" size="xSmall" />
+          <Icon color="lightGrey" icon="close" size="small" />
         </button>
       )}
       {content}

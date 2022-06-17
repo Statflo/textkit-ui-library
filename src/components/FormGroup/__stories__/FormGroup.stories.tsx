@@ -3,7 +3,7 @@ import React from 'react';
 import TextInput from '../../TextInput/TextInput';
 import FormGroup from '../FormGroup';
 
-export default { title: 'Components/Form Group' };
+export default { title: 'Inputs/Form Group' };
 
 const Template = (args: any) => (
   <FormGroup label={args.label} error={args.error} required={args.required}>

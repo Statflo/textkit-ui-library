@@ -4,7 +4,7 @@ import React from 'react';
 import IconButton, { IconButtonProps } from '../IconButton';
 
 export default {
-  title: 'Components/Buttons/Icon Button',
+  title: 'Buttons/Icon Button',
   component: IconButton,
   decorators: [
     (Story) => (

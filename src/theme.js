@@ -136,6 +136,7 @@ module.exports = {
     },
     minWidth: {
         4: '1rem',
+        24: '6rem',
     },
     opacity: {
         15: '0.15',
@@ -143,6 +144,7 @@ module.exports = {
     spacing: {
         15: '3.75rem',
         22: '5.5rem',
+        26: '6.5rem',
         84: '21rem',
         88: '22rem',
         100: '25rem',

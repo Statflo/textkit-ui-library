@@ -6,7 +6,7 @@ import ConfirmationMessage, {
 } from '../ConfirmationMessage';
 
 export default {
-  title: 'Components/Confirmation Message',
+  title: 'Popover/Confirmation Message',
   component: ConfirmationMessage,
 } as ComponentMeta<typeof ConfirmationMessage>;
 

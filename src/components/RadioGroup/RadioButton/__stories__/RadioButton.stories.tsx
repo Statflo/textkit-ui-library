@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import RadioButton, { RadioButtonProps } from '../RadioButton';
 
 export default {
-  title: 'Components/RadioGroup/RadioButton',
+  title: 'Inputs/RadioGroup/RadioButton',
   component: RadioButton,
   decorators: [
     (Story) => (

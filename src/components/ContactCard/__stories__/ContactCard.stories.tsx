@@ -4,7 +4,7 @@ import React from 'react';
 import ContactCard, { ContactCardProps } from '../ContactCard';
 
 export default {
-  title: 'Components/Contact Card',
+  title: 'Messaging/Contact Card',
   component: ContactCard,
 } as ComponentMeta<typeof ContactCard>;
 

@@ -4,7 +4,7 @@ import React from 'react';
 import Tag, { TagProps } from '../Tag';
 
 export default {
-  title: 'Components/Tag',
+  title: 'Data Display/Tag',
   argTypes: {
     type: {
       options: ['default', 'success', 'warning', 'danger', 'info'],

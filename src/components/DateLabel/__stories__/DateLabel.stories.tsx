@@ -5,7 +5,7 @@ import React from 'react';
 import DateLabel, { DateLabelProps } from '../DateLabel';
 
 export default {
-  title: 'Components/Date Label',
+  title: 'Data Display/Date Label',
   component: DateLabel,
 } as ComponentMeta<typeof DateLabel>;
 

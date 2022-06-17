@@ -5,7 +5,7 @@ import RadioButton from '../RadioButton/RadioButton';
 import RadioGroup from '../RadioGroup';
 
 export default {
-  title: 'Components/RadioGroup/RadioGroup',
+  title: 'Inputs/RadioGroup/RadioGroup',
   component: RadioGroup,
 } as ComponentMeta<typeof RadioGroup>;
 

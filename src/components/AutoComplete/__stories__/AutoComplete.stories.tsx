@@ -2,7 +2,7 @@ import React from 'react';
 
 import AutoComplete from '../AutoComplete';
 
-export default { title: 'Components/AutoComplete' };
+export default { title: 'Inputs/AutoComplete' };
 
 export const Default = () => {
   return (

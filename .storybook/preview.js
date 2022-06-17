@@ -23,5 +23,10 @@ export const parameters = {
   },
   docs: {
     theme,
+  },
+  options: {
+    storySort: {
+      order: ['Introduction', 'Changelog', 'Foundation', 'Buttons', 'Inputs', 'Data Display', 'Media', 'Popover', 'Feedback', 'Navigation', 'Messaging', 'Widgets']
+    }
   }
 };

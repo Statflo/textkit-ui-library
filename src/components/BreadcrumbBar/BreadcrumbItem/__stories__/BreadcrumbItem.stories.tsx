@@ -4,7 +4,7 @@ import React from 'react';
 import BreadcrumbItem, { BreadcrumbItemProps } from '../BreadcrumbItem';
 
 export default {
-  title: 'Components/BreadcrumbBar/BreadcrumbItem',
+  title: 'Navigation/BreadcrumbBar/BreadcrumbItem',
   component: BreadcrumbItem,
 } as ComponentMeta<typeof BreadcrumbItem>;
 

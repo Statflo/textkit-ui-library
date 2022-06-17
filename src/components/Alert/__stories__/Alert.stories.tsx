@@ -4,7 +4,7 @@ import React from 'react';
 import Alert, { AlertProps } from '../Alert';
 
 export default {
-  title: 'Components/Alert',
+  title: 'Feedback/Alert',
   component: Alert,
   decorators: [
     (Story) => (

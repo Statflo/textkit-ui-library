@@ -6,7 +6,7 @@ import ConversationStarter, {
 } from '../ConversationStarter';
 
 export default {
-  title: 'Components/Conversation Starter',
+  title: 'Messaging/Conversation Starter',
   component: ConversationStarter,
   decorators: [
     (Story) => (

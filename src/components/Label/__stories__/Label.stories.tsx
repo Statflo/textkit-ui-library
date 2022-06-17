@@ -3,7 +3,7 @@ import React from 'react';
 
 import Label, { LabelProps } from '../Label';
 
-export default { title: 'Components/Label' } as ComponentMeta<typeof Label>;
+export default { title: 'Inputs/Label' } as ComponentMeta<typeof Label>;
 
 const Template: ComponentStory<typeof Label> = (args: LabelProps) => (
   <Label required={args.required}>{args.children}</Label>

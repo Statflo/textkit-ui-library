@@ -3,7 +3,7 @@ import React from 'react';
 
 import Segment, { SegmentProps } from '../Segment';
 
-export default { title: 'Components/Segment' } as ComponentMeta<typeof Segment>;
+export default { title: 'Navigation/Segment' } as ComponentMeta<typeof Segment>;
 
 const Template: ComponentStory<typeof Segment> = (args: SegmentProps) => (
   <div className="w-96">

@@ -17,7 +17,7 @@ const BreadcrumbBar = ({ children }: BreadcrumbBarProps) => (
                 isClickable: index < React.Children.count(children) - 1,
               }),
               index < React.Children.count(children) - 1 && (
-                <Icon color="lightGrey" icon="angle-right" size="xxSmall" />
+                <Icon color="lightGrey" icon="angle-right" size={8} />
               ),
             ]
           : null

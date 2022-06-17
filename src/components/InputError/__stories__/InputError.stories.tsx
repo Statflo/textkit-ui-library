@@ -3,7 +3,7 @@ import React from 'react';
 
 import InputError, { InputErrorProps } from '../InputError';
 
-export default { title: 'Components/Input Error' } as ComponentMeta<
+export default { title: 'Inputs/Input Error' } as ComponentMeta<
   typeof InputError
 >;
 

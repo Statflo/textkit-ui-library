@@ -26,7 +26,7 @@ export interface ButtonProps
   /** Whether there should be padding or not */
   noSidePadding?: boolean;
   /** Callback function to run when the button is clicked */
-  onClick: (e: React.MouseEvent) => void;
+  onClick?: (e: React.MouseEvent) => void;
   /** Size of the button */
   size?: 'small' | 'medium' | 'large';
   /** Name of the icon to render on the right side of the component */
