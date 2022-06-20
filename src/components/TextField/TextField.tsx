@@ -46,7 +46,7 @@ const TextField = ({
       )}
       <input
         className={classNames(
-          'border rounded-md text-main text-16 py-2.5 px-3 placeholder:text-main-l3 hover-not-disabled:border-primary-d1 focus:border-primary-d2 focus-visible:outline-0 disabled:background-secondary disabled:text-main-l3',
+          'border rounded-md text-main text-16 py-2.5 px-3 placeholder:text-main-l3 hover-not-disabled:border-primary-d1 focus:border-primary-d2 focus-visible:outline-none disabled:bg-background-secondary disabled:text-main-l3',
           validation?.status === 'success'
             ? 'bg-success-l2 border-success-l1'
             : validation?.status === 'warning'
@@ -104,9 +104,9 @@ const TextField = ({
           onClick={() => setVisible((prevState) => !prevState)}
         >
           {isVisible ? (
-            <Icon color="grey" icon="no-view" size="small" />
+            <Icon color="grey" icon="no-view" />
           ) : (
-            <Icon color="grey" icon="view" size="small" />
+            <Icon color="grey" icon="view" />
           )}
         </button>
       )}

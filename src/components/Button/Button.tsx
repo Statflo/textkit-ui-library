@@ -119,7 +119,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <Icon
             color={variant === 'primary' ? 'white' : 'primary'}
             icon={leadingIcon}
-            size="small"
+            size={size === 'small' ? 'small' : 'medium'}
           />
         )}
         {children}
@@ -127,7 +127,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <Icon
             color={variant === 'primary' ? 'white' : 'primary'}
             icon={trailingIcon}
-            size="small"
+            size={size === 'small' ? 'small' : 'medium'}
           />
         )}
       </motion.button>
