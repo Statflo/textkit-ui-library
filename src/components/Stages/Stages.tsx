@@ -2,12 +2,12 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface Props {
+export interface StagesProps {
   completed?: number;
   stages?: number;
 }
 
-export default function Stages({ completed = 0, stages = 5 }: Props) {
+export default function Stages({ completed = 0, stages = 5 }: StagesProps) {
   return (
     <div className="flex items-center space-x-1">
       {Array.from(Array(stages).keys()).map((index) => {

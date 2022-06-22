@@ -2,12 +2,12 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface Props {
+export interface TagProps {
   children: React.ReactNode;
   type?: 'default' | 'success' | 'warning' | 'danger' | 'info';
 }
 
-export default function Segment({ children, type = 'default' }: Props) {
+export default function Tag({ children, type = 'default' }: TagProps) {
   return (
     <div
       className={classNames(

@@ -3,7 +3,7 @@ import React from 'react';
 import InputError from '../InputError/InputError';
 import Label from '../Label/Label';
 
-interface Props {
+export interface FormGroupProps {
   children: React.ReactNode;
   error?: string;
   label: string;
@@ -15,7 +15,7 @@ export default function FormGroup({
   error,
   label,
   required = false,
-}: Props) {
+}: FormGroupProps) {
   return (
     <div className="w-full space-y-1">
       <Label required={required}>{label}</Label>

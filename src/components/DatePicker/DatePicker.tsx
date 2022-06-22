@@ -37,9 +37,11 @@ export default function DatePicker({
   return (
     <div className="relative w-full border border-gray-spacer rounded-md flex items-center px-3 h-10 focus-within:border-primary-default">
       <ReactDatePicker
+        calendarClassName="floating"
+        className="floating w-full"
+        popperClassName="floating"
         ref={pickerInput}
         id={id}
-        className="w-full"
         aria-label={label}
         showTimeSelect={showTimeSelect}
         useWeekdaysShort={shortDays}

@@ -23,10 +23,10 @@ export default function GroupedOptions({ group, selectedOption }: Props) {
             className={({ active }) =>
               classNames(
                 'cursor-pointer select-none relative py-2 px-4',
-                active ? 'bg-gray-hover text-main-default' : '',
+                active ? 'bg-gray-hover text-main' : '',
                 selectedOption && selectedOption.id === option.id
-                  ? 'bg-primary-default text-white'
-                  : 'text-main-default'
+                  ? 'bg-primary text-white'
+                  : 'text-main'
               )
             }
             value={option}

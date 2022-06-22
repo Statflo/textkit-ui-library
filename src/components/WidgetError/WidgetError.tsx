@@ -3,7 +3,7 @@ import React from 'react';
 import Refresh from '../icons/Refresh';
 import Warning from '../icons/Warning';
 
-interface Props {
+export interface WidgetErrorProps {
   children: React.ReactNode;
   refreshLabel?: string;
   onRefresh?: VoidFunction;
@@ -13,7 +13,7 @@ export default function WidgetError({
   children,
   refreshLabel = 'Reload Widget',
   onRefresh,
-}: Props) {
+}: WidgetErrorProps) {
   return (
     <div className="flex items-center justify-center flex-col py-20 space-y-7">
       <div className="flex items-center justify-center flex-col text-warning-l1 space-y-2">

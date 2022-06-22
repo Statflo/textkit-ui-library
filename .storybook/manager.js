@@ -6,7 +6,9 @@ const theme = create({
     base: "light",
     brandTitle: "TextKit UI Library",
     brandUrl: "https://www.textkit.io",
-    brandImage: logo
+    brandImage: logo,
+    colorSecondary: '#4B64D7',
+    barSelectedColor: '#4B64D7',
 });
 
 addons.setConfig({

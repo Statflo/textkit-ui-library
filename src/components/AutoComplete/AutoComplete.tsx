@@ -93,7 +93,7 @@ export default function AutoComplete({
               tabIndex={1}
               className="px-4 select-none flex items-center justify-between text-main-default cursor-pointer space-x-2 h-8 rounded-sm focus:outline-none"
             >
-              <span className="text-sm font-medium text-main-default flex-1 truncate">
+              <span className="text-sm font-medium text-main flex-1 truncate">
                 {selectedOption ? selectedOption.label : placeholder}
               </span>
               {open ? (
@@ -123,7 +123,7 @@ export default function AutoComplete({
               >
                 <Search className="w-4 h-4 text-main-l2" />
                 <Combobox.Input
-                  className="border-none text-sm text-main-default focus:outline-none focus:ring-0 h-8 placeholder:text-main-l2 w-full"
+                  className="border-none text-sm text-main focus:outline-none focus:ring-0 h-8 placeholder:text-main-l2 w-full"
                   placeholder="Search"
                   onChange={(event) => setQuery(event.target.value)}
                 />
@@ -151,11 +151,11 @@ export default function AutoComplete({
                             className={({ active }) =>
                               classNames(
                                 'cursor-default select-none relative py-2 px-4',
-                                active ? 'bg-gray-hover text-main-default' : '',
+                                active ? 'bg-gray-hover text-main' : '',
                                 selectedOption &&
                                   selectedOption.id === option.id
-                                  ? 'bg-primary-default text-white'
-                                  : 'text-main-default'
+                                  ? 'bg-primary text-white'
+                                  : 'text-main'
                               )
                             }
                             value={option}

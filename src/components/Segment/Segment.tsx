@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface Props {
+export interface SegmentProps {
   activeIndex?: number;
   items: string[];
   onChange: (name: string, index: number) => void;
 }
 
-export default function Segment({ activeIndex = 0, items, onChange }: Props) {
+export default function Segment({
+  activeIndex = 0,
+  items,
+  onChange,
+}: SegmentProps) {
   const [selected, setSelected] = useState<number>(activeIndex);
 
   useEffect(() => {

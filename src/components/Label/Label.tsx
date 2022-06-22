@@ -2,7 +2,8 @@ import React from 'react';
 
 import { classNames } from '../../utils/classnames';
 
-interface Props extends React.LabelHTMLAttributes<HTMLLabelElement> {
+export interface LabelProps
+  extends React.LabelHTMLAttributes<HTMLLabelElement> {
   required?: boolean;
 }
 
@@ -11,7 +12,7 @@ export default function Label({
   className,
   required = false,
   ...otherProps
-}: Props) {
+}: LabelProps) {
   return (
     <label
       className={classNames(

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Rings } from 'react-loader-spinner';
 
-interface Props {
+export interface LoaderProps {
   children: React.ReactNode;
 }
 
-export default function Loader({ children }: Props) {
+export default function Loader({ children }: LoaderProps) {
   return (
     <div className="flex flex-1 items-center justify-center flex-col py-20 space-y-4">
       <Rings color="hsl(229.3, 63.6%, 56.9%)" height={75} width={75} />
